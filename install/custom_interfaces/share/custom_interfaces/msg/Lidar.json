@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "custom_interfaces/msg/Lidar",
+      "fields": [
+        {
+          "name": "distances",
+          "type": {
+            "type_id": 155,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "angles",
+          "type": {
+            "type_id": 152,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "custom_interfaces/msg/Lidar",
+      "hash_string": "RIHS01_fb8b18acf5eb6e2e498a1d2de3930e181ade67944c507b3620db64aa31df9bc2"
+    }
+  ]
+}

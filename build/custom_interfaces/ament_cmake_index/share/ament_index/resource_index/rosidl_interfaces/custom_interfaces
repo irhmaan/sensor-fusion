@@ -1,0 +1,16 @@
+msg/Battery.idl
+msg/Battery.msg
+msg/DistanceSensors.idl
+msg/DistanceSensors.msg
+msg/Encoder.idl
+msg/Encoder.msg
+msg/Environment.idl
+msg/Environment.msg
+msg/IMU.idl
+msg/IMU.msg
+msg/Lidar.idl
+msg/Lidar.msg
+msg/Motors.idl
+msg/Motors.msg
+msg/Odometry.idl
+msg/Odometry.msg

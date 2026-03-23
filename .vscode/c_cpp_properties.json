@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "ROS2",
+            "includePath": [
+                "${workspaceFolder}/install/custom_interfaces/include/**",
+                "${workspaceFolder}/build/custom_interfaces/rosidl_generator_cpp/**",
+                "/opt/ros/jazzy/include/**",
+                ""
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,44 @@
+[0.027s] Invoking command in '/home/rehmaan/sensor_fusion/build/sensors_data': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rehmaan/ros2-projects/install/turtlesim_project:/home/rehmaan/ros2-projects/install/my_py_pkg:/home/rehmaan/ros2/install/py_pkg:/opt/ros/jazzy /usr/bin/cmake /home/rehmaan/sensor_fusion/src/sensors_data -DCMAKE_INSTALL_PREFIX=/home/rehmaan/sensor_fusion/install/sensors_data
+[0.317s] -- The C compiler identification is GNU 13.3.0
+[1.488s] -- The CXX compiler identification is GNU 13.3.0
+[2.528s] -- Detecting C compiler ABI info
+[2.908s] -- Detecting C compiler ABI info - done
+[2.915s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.915s] -- Detecting C compile features
+[2.916s] -- Detecting C compile features - done
+[3.088s] -- Detecting CXX compiler ABI info
+[3.467s] -- Detecting CXX compiler ABI info - done
+[3.474s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.474s] -- Detecting CXX compile features
+[3.474s] -- Detecting CXX compile features - done
+[3.483s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.601s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.700s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[4.022s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[4.037s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[4.049s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.067s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.137s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[4.140s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[4.207s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[4.624s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[4.842s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.161s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[8.161s]   By not providing "Findcustom_interfaces.cmake" in CMAKE_MODULE_PATH this
+[8.161s]   project has asked CMake to find a package configuration file provided by
+[8.161s]   "custom_interfaces", but CMake did not find one.
+[8.162s] 
+[8.162s]   Could not find a package configuration file provided by "custom_interfaces"
+[8.162s]   with any of the following names:
+[8.162s] 
+[8.162s]     custom_interfacesConfig.cmake
+[8.162s]     custom_interfaces-config.cmake
+[8.162s] 
+[8.162s]   Add the installation prefix of "custom_interfaces" to CMAKE_PREFIX_PATH or
+[8.162s]   set "custom_interfaces_DIR" to a directory containing one of the above
+[8.163s]   files.  If "custom_interfaces" provides a separate development package or
+[8.163s]   SDK, be sure it has been installed.
+[8.163s] 
+[8.163s] [0m
+[8.163s] -- Configuring incomplete, errors occurred!
+[8.182s] Invoked command in '/home/rehmaan/sensor_fusion/build/sensors_data' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rehmaan/ros2-projects/install/turtlesim_project:/home/rehmaan/ros2-projects/install/my_py_pkg:/home/rehmaan/ros2/install/py_pkg:/opt/ros/jazzy /usr/bin/cmake /home/rehmaan/sensor_fusion/src/sensors_data -DCMAKE_INSTALL_PREFIX=/home/rehmaan/sensor_fusion/install/sensors_data

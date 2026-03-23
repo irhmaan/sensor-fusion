@@ -1,0 +1,13 @@
+{
+  "package_name": "custom_interfaces",
+  "non_idl_tuples": [
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/Battery.msg",
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/DistanceSensors.msg",
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/Encoder.msg",
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/Environment.msg",
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/IMU.msg",
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/Lidar.msg",
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/Motors.msg",
+    "/home/rehmaan/sensor_fusion/src/custom_interfaces:msg/Odometry.msg"
+  ]
+}
