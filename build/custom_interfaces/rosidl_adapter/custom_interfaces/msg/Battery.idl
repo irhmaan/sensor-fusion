@@ -8,7 +8,7 @@ module custom_interfaces {
     @verbatim (language="comment", text=
       "Battery Data")
     struct Battery {
-      double volatge;
+      double voltage;
 
       int64 percentage;
     };

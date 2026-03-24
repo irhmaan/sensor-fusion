@@ -1,5 +1,7 @@
 /home/rehmaan/sensor_fusion/build/sensors_data/CMakeFiles/uninstall.dir
 /home/rehmaan/sensor_fusion/build/sensors_data/CMakeFiles/sensors_data_uninstall.dir
+/home/rehmaan/sensor_fusion/build/sensors_data/CMakeFiles/odometry_node.dir
+/home/rehmaan/sensor_fusion/build/sensors_data/CMakeFiles/battery_node.dir
 /home/rehmaan/sensor_fusion/build/sensors_data/CMakeFiles/test.dir
 /home/rehmaan/sensor_fusion/build/sensors_data/CMakeFiles/edit_cache.dir
 /home/rehmaan/sensor_fusion/build/sensors_data/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,3 @@
 #Battery Data
-float64 volatge
+float64 voltage
 int64 percentage

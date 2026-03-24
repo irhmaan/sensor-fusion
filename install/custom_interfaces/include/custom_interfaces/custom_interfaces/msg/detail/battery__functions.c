@@ -17,7 +17,7 @@ custom_interfaces__msg__Battery__init(custom_interfaces__msg__Battery * msg)
   if (!msg) {
     return false;
   }
-  // volatge
+  // voltage
   // percentage
   return true;
 }
@@ -28,7 +28,7 @@ custom_interfaces__msg__Battery__fini(custom_interfaces__msg__Battery * msg)
   if (!msg) {
     return;
   }
-  // volatge
+  // voltage
   // percentage
 }
 
@@ -38,8 +38,8 @@ custom_interfaces__msg__Battery__are_equal(const custom_interfaces__msg__Battery
   if (!lhs || !rhs) {
     return false;
   }
-  // volatge
-  if (lhs->volatge != rhs->volatge) {
+  // voltage
+  if (lhs->voltage != rhs->voltage) {
     return false;
   }
   // percentage
@@ -57,8 +57,8 @@ custom_interfaces__msg__Battery__copy(
   if (!input || !output) {
     return false;
   }
-  // volatge
-  output->volatge = input->volatge;
+  // voltage
+  output->voltage = input->voltage;
   // percentage
   output->percentage = input->percentage;
   return true;

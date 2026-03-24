@@ -48,9 +48,9 @@ bool cdr_serialize_custom_interfaces__msg__Battery(
   const custom_interfaces__msg__Battery * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: volatge
+  // Field name: voltage
   {
-    cdr << ros_message->volatge;
+    cdr << ros_message->voltage;
   }
 
   // Field name: percentage
@@ -66,9 +66,9 @@ bool cdr_deserialize_custom_interfaces__msg__Battery(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces__msg__Battery * ros_message)
 {
-  // Field name: volatge
+  // Field name: voltage
   {
-    cdr >> ros_message->volatge;
+    cdr >> ros_message->voltage;
   }
 
   // Field name: percentage
@@ -94,9 +94,9 @@ size_t get_serialized_size_custom_interfaces__msg__Battery(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: volatge
+  // Field name: voltage
   {
-    size_t item_size = sizeof(ros_message->volatge);
+    size_t item_size = sizeof(ros_message->voltage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -130,7 +130,7 @@ size_t max_serialized_size_custom_interfaces__msg__Battery(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: volatge
+  // Field name: voltage
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -167,9 +167,9 @@ bool cdr_serialize_key_custom_interfaces__msg__Battery(
   const custom_interfaces__msg__Battery * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: volatge
+  // Field name: voltage
   {
-    cdr << ros_message->volatge;
+    cdr << ros_message->voltage;
   }
 
   // Field name: percentage
@@ -195,9 +195,9 @@ size_t get_serialized_size_key_custom_interfaces__msg__Battery(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: volatge
+  // Field name: voltage
   {
-    size_t item_size = sizeof(ros_message->volatge);
+    size_t item_size = sizeof(ros_message->voltage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -229,7 +229,7 @@ size_t max_serialized_size_key_custom_interfaces__msg__Battery(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: volatge
+  // Field name: voltage
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);

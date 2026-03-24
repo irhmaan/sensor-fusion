@@ -1,0 +1,25 @@
+[0.317s] Invoking command in '/home/rehmaan/sensor_fusion/build/sensors_data': CMAKE_PREFIX_PATH=/home/rehmaan/sensor_fusion/install/custom_interfaces:/home/rehmaan/sensor_fusion/install/sensors_data:/home/rehmaan/ros2-projects/install/my_robot_bringup:/home/rehmaan/ros2-projects/install/my_cpp_pkg:/home/rehmaan/ros2-projects/install/my_robot_interfaces:/home/rehmaan/ros2-projects/src/my_cpp_pkg/install/my_cpp_pkg:/home/rehmaan/ros2/install/launch_turtle_project:/home/rehmaan/ros2/install/cpp_pkg:/home/rehmaan/ros2/install/my_custom_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rehmaan/ros2-projects/install/turtlesim_project:/home/rehmaan/ros2-projects/install/my_py_pkg:/home/rehmaan/ros2/install/py_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/rehmaan/sensor_fusion/build/sensors_data -- -j12 -l12
+[0.335s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.532s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.893s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.901s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.918s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.929s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.987s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.989s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.387s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.691s] -- Found custom_interfaces: 0.0.0 (/home/rehmaan/sensor_fusion/install/custom_interfaces/share/custom_interfaces/cmake)
+[1.698s] -- Found random_numbers: 2.0.1 (/opt/ros/jazzy/share/random_numbers/cmake)
+[1.785s] -- Configuring done (1.5s)
+[1.797s] -- Generating done (0.0s)
+[1.801s] -- Build files have been written to: /home/rehmaan/sensor_fusion/build/sensors_data
+[1.827s] [ 25%] [32mBuilding CXX object CMakeFiles/battery_node.dir/src/battery.cpp.o[0m
+[1.835s] [ 75%] Built target odometry_node
+[2.001s] [01m[K/home/rehmaan/sensor_fusion/src/sensors_data/src/battery.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Krandom_numbers.h: No such file or directory
+[2.001s]     3 | #include [01;31m[K"random_numbers.h"[m[K
+[2.002s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.002s] compilation terminated.
+[2.004s] gmake[2]: *** [CMakeFiles/battery_node.dir/build.make:76: CMakeFiles/battery_node.dir/src/battery.cpp.o] Error 1
+[2.004s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/battery_node.dir/all] Error 2
+[2.005s] gmake: *** [Makefile:146: all] Error 2
+[2.008s] Invoked command in '/home/rehmaan/sensor_fusion/build/sensors_data' returned '2': CMAKE_PREFIX_PATH=/home/rehmaan/sensor_fusion/install/custom_interfaces:/home/rehmaan/sensor_fusion/install/sensors_data:/home/rehmaan/ros2-projects/install/my_robot_bringup:/home/rehmaan/ros2-projects/install/my_cpp_pkg:/home/rehmaan/ros2-projects/install/my_robot_interfaces:/home/rehmaan/ros2-projects/src/my_cpp_pkg/install/my_cpp_pkg:/home/rehmaan/ros2/install/launch_turtle_project:/home/rehmaan/ros2/install/cpp_pkg:/home/rehmaan/ros2/install/my_custom_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/rehmaan/ros2-projects/install/turtlesim_project:/home/rehmaan/ros2-projects/install/my_py_pkg:/home/rehmaan/ros2/install/py_pkg:/opt/ros/jazzy /usr/bin/cmake --build /home/rehmaan/sensor_fusion/build/sensors_data -- -j12 -l12

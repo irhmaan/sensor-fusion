@@ -1,3 +1,5 @@
+/home/rehmaan/sensor_fusion/install/sensors_data/lib/sensors_data/odometry_node
+/home/rehmaan/sensor_fusion/install/sensors_data/lib/sensors_data/battery_node
 /home/rehmaan/sensor_fusion/install/sensors_data/share/ament_index/resource_index/package_run_dependencies/sensors_data
 /home/rehmaan/sensor_fusion/install/sensors_data/share/ament_index/resource_index/parent_prefix_path/sensors_data
 /home/rehmaan/sensor_fusion/install/sensors_data/share/sensors_data/environment/ament_prefix_path.sh

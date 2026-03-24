@@ -50,13 +50,13 @@ bool custom_interfaces__msg__battery__convert_from_py(PyObject * _pymsg, void * 
     assert(strncmp("custom_interfaces.msg._battery.Battery", full_classname_dest, 38) == 0);
   }
   custom_interfaces__msg__Battery * ros_message = _ros_message;
-  {  // volatge
-    PyObject * field = PyObject_GetAttrString(_pymsg, "volatge");
+  {  // voltage
+    PyObject * field = PyObject_GetAttrString(_pymsg, "voltage");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->volatge = PyFloat_AS_DOUBLE(field);
+    ros_message->voltage = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // percentage
@@ -90,11 +90,11 @@ PyObject * custom_interfaces__msg__battery__convert_to_py(void * raw_ros_message
     }
   }
   custom_interfaces__msg__Battery * ros_message = (custom_interfaces__msg__Battery *)raw_ros_message;
-  {  // volatge
+  {  // voltage
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->volatge);
+    field = PyFloat_FromDouble(ros_message->voltage);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "volatge", field);
+      int rc = PyObject_SetAttrString(_pymessage, "voltage", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

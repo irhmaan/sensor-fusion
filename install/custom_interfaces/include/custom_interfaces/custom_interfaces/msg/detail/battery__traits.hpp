@@ -28,10 +28,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: volatge
+  // member: voltage
   {
-    out << "volatge: ";
-    rosidl_generator_traits::value_to_yaml(msg.volatge, out);
+    out << "voltage: ";
+    rosidl_generator_traits::value_to_yaml(msg.voltage, out);
     out << ", ";
   }
 
@@ -47,13 +47,13 @@ inline void to_block_style_yaml(
   const Battery & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: volatge
+  // member: voltage
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "volatge: ";
-    rosidl_generator_traits::value_to_yaml(msg.volatge, out);
+    out << "voltage: ";
+    rosidl_generator_traits::value_to_yaml(msg.voltage, out);
     out << "\n";
   }
 

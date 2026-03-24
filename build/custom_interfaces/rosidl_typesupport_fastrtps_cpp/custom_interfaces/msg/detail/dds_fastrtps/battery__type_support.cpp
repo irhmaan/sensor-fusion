@@ -36,8 +36,8 @@ cdr_serialize(
   const custom_interfaces::msg::Battery & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: volatge
-  cdr << ros_message.volatge;
+  // Member: voltage
+  cdr << ros_message.voltage;
 
   // Member: percentage
   cdr << ros_message.percentage;
@@ -51,8 +51,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces::msg::Battery & ros_message)
 {
-  // Member: volatge
-  cdr >> ros_message.volatge;
+  // Member: voltage
+  cdr >> ros_message.voltage;
 
   // Member: percentage
   cdr >> ros_message.percentage;
@@ -74,9 +74,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: volatge
+  // Member: voltage
   {
-    size_t item_size = sizeof(ros_message.volatge);
+    size_t item_size = sizeof(ros_message.voltage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -111,7 +111,7 @@ max_serialized_size_Battery(
   full_bounded = true;
   is_plain = true;
 
-  // Member: volatge
+  // Member: voltage
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -148,8 +148,8 @@ cdr_serialize_key(
   const custom_interfaces::msg::Battery & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: volatge
-  cdr << ros_message.volatge;
+  // Member: voltage
+  cdr << ros_message.voltage;
 
   // Member: percentage
   cdr << ros_message.percentage;
@@ -170,9 +170,9 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: volatge
+  // Member: voltage
   {
-    size_t item_size = sizeof(ros_message.volatge);
+    size_t item_size = sizeof(ros_message.voltage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -206,7 +206,7 @@ max_serialized_size_key_Battery(
   full_bounded = true;
   is_plain = true;
 
-  // Member: volatge
+  // Member: voltage
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);

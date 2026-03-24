@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "custom_interfaces/msg/detail/battery__struct.h"
-#include "custom_interfaces/msg/detail/battery__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/msg/detail/battery__type_support.h"
+#include "custom_interfaces/msg/detail/battery__struct.h"
+#include "custom_interfaces/msg/detail/battery__functions.h"
 
 #ifdef __cplusplus
 extern "C"

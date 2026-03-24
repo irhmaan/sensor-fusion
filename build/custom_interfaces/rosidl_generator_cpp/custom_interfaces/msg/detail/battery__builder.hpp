@@ -40,15 +40,15 @@ private:
   ::custom_interfaces::msg::Battery msg_;
 };
 
-class Init_Battery_volatge
+class Init_Battery_voltage
 {
 public:
-  Init_Battery_volatge()
+  Init_Battery_voltage()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Battery_percentage volatge(::custom_interfaces::msg::Battery::_volatge_type arg)
+  Init_Battery_percentage voltage(::custom_interfaces::msg::Battery::_voltage_type arg)
   {
-    msg_.volatge = std::move(arg);
+    msg_.voltage = std::move(arg);
     return Init_Battery_percentage(msg_);
   }
 
@@ -67,7 +67,7 @@ template<>
 inline
 auto build<::custom_interfaces::msg::Battery>()
 {
-  return custom_interfaces::msg::builder::Init_Battery_volatge();
+  return custom_interfaces::msg::builder::Init_Battery_voltage();
 }
 
 }  // namespace custom_interfaces

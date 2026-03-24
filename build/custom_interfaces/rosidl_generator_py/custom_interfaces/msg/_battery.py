@@ -64,13 +64,13 @@ class Battery(metaclass=Metaclass_Battery):
     """Message class 'Battery'."""
 
     __slots__ = [
-        '_volatge',
+        '_voltage',
         '_percentage',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'volatge': 'double',
+        'voltage': 'double',
         'percentage': 'int64',
     }
 
@@ -90,7 +90,7 @@ class Battery(metaclass=Metaclass_Battery):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.volatge = kwargs.get('volatge', float())
+        self.voltage = kwargs.get('voltage', float())
         self.percentage = kwargs.get('percentage', int())
 
     def __repr__(self):
@@ -123,7 +123,7 @@ class Battery(metaclass=Metaclass_Battery):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.volatge != other.volatge:
+        if self.voltage != other.voltage:
             return False
         if self.percentage != other.percentage:
             return False
@@ -135,19 +135,19 @@ class Battery(metaclass=Metaclass_Battery):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def volatge(self):
-        """Message field 'volatge'."""
-        return self._volatge
+    def voltage(self):
+        """Message field 'voltage'."""
+        return self._voltage
 
-    @volatge.setter
-    def volatge(self, value):
+    @voltage.setter
+    def voltage(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'volatge' field must be of type 'float'"
+                "The 'voltage' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'volatge' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._volatge = value
+                "The 'voltage' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._voltage = value
 
     @builtins.property
     def percentage(self):

@@ -145,54 +145,6 @@
 },
 {
   "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
   "command": "/usr/bin/c++ -DFASTCDR_DYN_LINK -DROSIDL_TYPESUPPORT_FASTRTPS_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_fastrtps_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rmw -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -o CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/battery__type_support_c.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/battery__type_support_c.cpp",
   "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/battery__type_support_c.cpp",
   "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/battery__type_support_c.cpp.o"
@@ -238,54 +190,6 @@
   "command": "/usr/bin/c++ -DFASTCDR_DYN_LINK -DROSIDL_TYPESUPPORT_FASTRTPS_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_fastrtps_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rmw -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -o CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/odometry__type_support_c.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/odometry__type_support_c.cpp",
   "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/odometry__type_support_c.cpp",
   "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/odometry__type_support_c.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp.o"
-},
-{
-  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
-  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp",
-  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp",
-  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp.o"
 },
 {
   "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
@@ -430,6 +334,102 @@
   "command": "/usr/bin/c++ -DROSIDL_TYPESUPPORT_CPP_BUILDING_DLL -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_cpp -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -o CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/odometry__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_cpp/custom_interfaces/msg/odometry__type_support.cpp",
   "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_cpp/custom_interfaces/msg/odometry__type_support.cpp",
   "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/odometry__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/battery__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/distance_sensors__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/encoder__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/environment__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/imu__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/lidar__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/motors__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/odometry__type_support.c.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/battery__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/distance_sensors__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/encoder__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/environment__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/imu__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/lidar__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/motors__type_support.cpp.o"
+},
+{
+  "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_interfaces -DROS_PACKAGE_NAME=\\\"custom_interfaces\\\" -I/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp.o -c /home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp",
+  "file": "/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp",
+  "output": "CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/odometry__type_support.cpp.o"
 },
 {
   "directory": "/home/rehmaan/sensor_fusion/build/custom_interfaces",

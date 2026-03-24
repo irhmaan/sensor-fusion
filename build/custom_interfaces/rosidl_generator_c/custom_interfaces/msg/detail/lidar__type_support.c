@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "custom_interfaces/msg/detail/lidar__functions.h"
-#include "custom_interfaces/msg/detail/lidar__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/msg/detail/lidar__struct.h"
+#include "custom_interfaces/msg/detail/lidar__functions.h"
+#include "custom_interfaces/msg/detail/lidar__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

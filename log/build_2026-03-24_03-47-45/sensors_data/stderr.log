@@ -1,0 +1,13 @@
+[31mCMake Error at CMakeLists.txt:31 (install):
+  Syntax error in cmake code at
+
+    /home/rehmaan/sensor_fusion/src/sensors_data/CMakeLists.txt:33
+
+  when parsing string
+
+    lib/${PROJECT_NAME
+
+  There is an unterminated variable reference.
+
+[0m
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

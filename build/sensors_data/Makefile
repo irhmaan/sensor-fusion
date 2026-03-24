@@ -197,6 +197,80 @@ sensors_data_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensors_data_uninstall.dir/build.make CMakeFiles/sensors_data_uninstall.dir/build
 .PHONY : sensors_data_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named odometry_node
+
+# Build rule for target.
+odometry_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 odometry_node
+.PHONY : odometry_node
+
+# fast build rule for target.
+odometry_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_node.dir/build.make CMakeFiles/odometry_node.dir/build
+.PHONY : odometry_node/fast
+
+#=============================================================================
+# Target rules for targets named battery_node
+
+# Build rule for target.
+battery_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 battery_node
+.PHONY : battery_node
+
+# fast build rule for target.
+battery_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battery_node.dir/build.make CMakeFiles/battery_node.dir/build
+.PHONY : battery_node/fast
+
+src/battery.o: src/battery.cpp.o
+.PHONY : src/battery.o
+
+# target to build an object file
+src/battery.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battery_node.dir/build.make CMakeFiles/battery_node.dir/src/battery.cpp.o
+.PHONY : src/battery.cpp.o
+
+src/battery.i: src/battery.cpp.i
+.PHONY : src/battery.i
+
+# target to preprocess a source file
+src/battery.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battery_node.dir/build.make CMakeFiles/battery_node.dir/src/battery.cpp.i
+.PHONY : src/battery.cpp.i
+
+src/battery.s: src/battery.cpp.s
+.PHONY : src/battery.s
+
+# target to generate assembly for a file
+src/battery.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battery_node.dir/build.make CMakeFiles/battery_node.dir/src/battery.cpp.s
+.PHONY : src/battery.cpp.s
+
+src/odometry.o: src/odometry.cpp.o
+.PHONY : src/odometry.o
+
+# target to build an object file
+src/odometry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_node.dir/build.make CMakeFiles/odometry_node.dir/src/odometry.cpp.o
+.PHONY : src/odometry.cpp.o
+
+src/odometry.i: src/odometry.cpp.i
+.PHONY : src/odometry.i
+
+# target to preprocess a source file
+src/odometry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_node.dir/build.make CMakeFiles/odometry_node.dir/src/odometry.cpp.i
+.PHONY : src/odometry.cpp.i
+
+src/odometry.s: src/odometry.cpp.s
+.PHONY : src/odometry.s
+
+# target to generate assembly for a file
+src/odometry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_node.dir/build.make CMakeFiles/odometry_node.dir/src/odometry.cpp.s
+.PHONY : src/odometry.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +286,14 @@ help:
 	@echo "... test"
 	@echo "... sensors_data_uninstall"
 	@echo "... uninstall"
+	@echo "... battery_node"
+	@echo "... odometry_node"
+	@echo "... src/battery.o"
+	@echo "... src/battery.i"
+	@echo "... src/battery.s"
+	@echo "... src/odometry.o"
+	@echo "... src/odometry.i"
+	@echo "... src/odometry.s"
 .PHONY : help
 
 

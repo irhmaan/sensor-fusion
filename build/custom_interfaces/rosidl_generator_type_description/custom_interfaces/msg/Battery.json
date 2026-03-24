@@ -4,7 +4,7 @@
       "type_name": "custom_interfaces/msg/Battery",
       "fields": [
         {
-          "name": "volatge",
+          "name": "voltage",
           "type": {
             "type_id": 11,
             "capacity": 0,
@@ -30,7 +30,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/msg/Battery",
-      "hash_string": "RIHS01_73e40b1d5939a48de1fca814dfaf6f6003ac175f991dad3d44a46cd395416150"
+      "hash_string": "RIHS01_7ee33886d40f973c314a7c35266d3ca08eb8af1697fed7ea6c6cab63e7a0df5f"
     }
   ]
 }

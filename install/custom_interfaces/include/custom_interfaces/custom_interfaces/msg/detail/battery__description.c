@@ -11,10 +11,10 @@ custom_interfaces__msg__Battery__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x73, 0xe4, 0x0b, 0x1d, 0x59, 0x39, 0xa4, 0x8d,
-      0xe1, 0xfc, 0xa8, 0x14, 0xdf, 0xaf, 0x6f, 0x60,
-      0x03, 0xac, 0x17, 0x5f, 0x99, 0x1d, 0xad, 0x3d,
-      0x44, 0xa4, 0x6c, 0xd3, 0x95, 0x41, 0x61, 0x50,
+      0x7e, 0xe3, 0x38, 0x86, 0xd4, 0x0f, 0x97, 0x3c,
+      0x31, 0x4a, 0x7c, 0x35, 0x26, 0x6d, 0x3c, 0xa0,
+      0x8e, 0xb8, 0xaf, 0x16, 0x97, 0xfe, 0xd7, 0xea,
+      0x6c, 0x6c, 0xab, 0x63, 0xe7, 0xa0, 0xdf, 0x5f,
     }};
   return &hash;
 }
@@ -31,12 +31,12 @@ custom_interfaces__msg__Battery__get_type_hash(
 static char custom_interfaces__msg__Battery__TYPE_NAME[] = "custom_interfaces/msg/Battery";
 
 // Define type names, field names, and default values
-static char custom_interfaces__msg__Battery__FIELD_NAME__volatge[] = "volatge";
+static char custom_interfaces__msg__Battery__FIELD_NAME__voltage[] = "voltage";
 static char custom_interfaces__msg__Battery__FIELD_NAME__percentage[] = "percentage";
 
 static rosidl_runtime_c__type_description__Field custom_interfaces__msg__Battery__FIELDS[] = {
   {
-    {custom_interfaces__msg__Battery__FIELD_NAME__volatge, 7, 7},
+    {custom_interfaces__msg__Battery__FIELD_NAME__voltage, 7, 7},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
       0,
@@ -78,7 +78,7 @@ custom_interfaces__msg__Battery__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "#Battery Data\n"
-  "float64 volatge\n"
+  "float64 voltage\n"
   "int64 percentage";
 
 static char msg_encoding[] = "msg";

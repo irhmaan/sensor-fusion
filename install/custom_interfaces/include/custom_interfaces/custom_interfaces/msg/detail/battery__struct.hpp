@@ -41,7 +41,7 @@ struct Battery_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->volatge = 0.0;
+      this->voltage = 0.0;
       this->percentage = 0ll;
     }
   }
@@ -52,24 +52,24 @@ struct Battery_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->volatge = 0.0;
+      this->voltage = 0.0;
       this->percentage = 0ll;
     }
   }
 
   // field types and members
-  using _volatge_type =
+  using _voltage_type =
     double;
-  _volatge_type volatge;
+  _voltage_type voltage;
   using _percentage_type =
     int64_t;
   _percentage_type percentage;
 
   // setters for named parameter idiom
-  Type & set__volatge(
+  Type & set__voltage(
     const double & _arg)
   {
-    this->volatge = _arg;
+    this->voltage = _arg;
     return *this;
   }
   Type & set__percentage(
@@ -121,7 +121,7 @@ struct Battery_
   // comparison operators
   bool operator==(const Battery_ & other) const
   {
-    if (this->volatge != other.volatge) {
+    if (this->voltage != other.voltage) {
       return false;
     }
     if (this->percentage != other.percentage) {

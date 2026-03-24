@@ -40,7 +40,7 @@ void Battery_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember Battery_message_member_array[2] = {
   {
-    "volatge",  // name
+    "voltage",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -48,7 +48,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Battery_messa
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::Battery, volatge),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::Battery, voltage),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

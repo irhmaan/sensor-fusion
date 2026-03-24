@@ -25,7 +25,7 @@ extern "C"
  */
 typedef struct custom_interfaces__msg__Battery
 {
-  double volatge;
+  double voltage;
   int64_t percentage;
 } custom_interfaces__msg__Battery;
 
