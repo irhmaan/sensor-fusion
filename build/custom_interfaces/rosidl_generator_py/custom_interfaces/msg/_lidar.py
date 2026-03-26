@@ -75,14 +75,14 @@ class Lidar(metaclass=Metaclass_Lidar):
 
     _fields_and_field_types = {
         'distances': 'sequence<double>',
-        'angles': 'sequence<int64>',
+        'angles': 'sequence<double>',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int64')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -95,7 +95,7 @@ class Lidar(metaclass=Metaclass_Lidar):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.distances = array.array('d', kwargs.get('distances', []))
-        self.angles = array.array('q', kwargs.get('angles', []))
+        self.angles = array.array('d', kwargs.get('angles', []))
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -175,8 +175,8 @@ class Lidar(metaclass=Metaclass_Lidar):
     def angles(self, value):
         if self._check_fields:
             if isinstance(value, array.array):
-                assert value.typecode == 'q', \
-                    "The 'angles' array.array() must have the type code of 'q'"
+                assert value.typecode == 'd', \
+                    "The 'angles' array.array() must have the type code of 'd'"
                 self._angles = value
                 return
             from collections.abc import Sequence
@@ -189,7 +189,7 @@ class Lidar(metaclass=Metaclass_Lidar):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, int) for v in value) and
-                 all(val >= -9223372036854775808 and val < 9223372036854775808 for val in value)), \
-                "The 'angles' field must be a set or sequence and each value of type 'int' and each integer in [-9223372036854775808, 9223372036854775807]"
-        self._angles = array.array('q', value)
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'angles' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._angles = array.array('d', value)

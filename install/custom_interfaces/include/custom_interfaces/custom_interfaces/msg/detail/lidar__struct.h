@@ -31,7 +31,7 @@ extern "C"
 typedef struct custom_interfaces__msg__Lidar
 {
   rosidl_runtime_c__double__Sequence distances;
-  rosidl_runtime_c__int64__Sequence angles;
+  rosidl_runtime_c__double__Sequence angles;
 } custom_interfaces__msg__Lidar;
 
 // Struct for a sequence of custom_interfaces__msg__Lidar.

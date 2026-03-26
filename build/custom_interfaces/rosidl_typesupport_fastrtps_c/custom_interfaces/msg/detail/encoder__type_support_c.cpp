@@ -53,9 +53,9 @@ bool cdr_serialize_custom_interfaces__msg__Encoder(
     cdr << ros_message->left_ticks;
   }
 
-  // Field name: left_velocit
+  // Field name: left_velocity
   {
-    cdr << ros_message->left_velocit;
+    cdr << ros_message->left_velocity;
   }
 
   // Field name: right_ticks
@@ -81,9 +81,9 @@ bool cdr_deserialize_custom_interfaces__msg__Encoder(
     cdr >> ros_message->left_ticks;
   }
 
-  // Field name: left_velocit
+  // Field name: left_velocity
   {
-    cdr >> ros_message->left_velocit;
+    cdr >> ros_message->left_velocity;
   }
 
   // Field name: right_ticks
@@ -121,9 +121,9 @@ size_t get_serialized_size_custom_interfaces__msg__Encoder(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: left_velocit
+  // Field name: left_velocity
   {
-    size_t item_size = sizeof(ros_message->left_velocit);
+    size_t item_size = sizeof(ros_message->left_velocity);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -172,7 +172,7 @@ size_t max_serialized_size_custom_interfaces__msg__Encoder(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: left_velocit
+  // Field name: left_velocity
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -222,9 +222,9 @@ bool cdr_serialize_key_custom_interfaces__msg__Encoder(
     cdr << ros_message->left_ticks;
   }
 
-  // Field name: left_velocit
+  // Field name: left_velocity
   {
-    cdr << ros_message->left_velocit;
+    cdr << ros_message->left_velocity;
   }
 
   // Field name: right_ticks
@@ -262,9 +262,9 @@ size_t get_serialized_size_key_custom_interfaces__msg__Encoder(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: left_velocit
+  // Field name: left_velocity
   {
-    size_t item_size = sizeof(ros_message->left_velocit);
+    size_t item_size = sizeof(ros_message->left_velocity);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -311,7 +311,7 @@ size_t max_serialized_size_key_custom_interfaces__msg__Encoder(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: left_velocit
+  // Field name: left_velocity
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);

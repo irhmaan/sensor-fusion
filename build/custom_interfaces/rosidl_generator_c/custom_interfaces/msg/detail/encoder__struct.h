@@ -26,7 +26,7 @@ extern "C"
 typedef struct custom_interfaces__msg__Encoder
 {
   int64_t left_ticks;
-  double left_velocit;
+  double left_velocity;
   int64_t right_ticks;
   double right_velocity;
 } custom_interfaces__msg__Encoder;

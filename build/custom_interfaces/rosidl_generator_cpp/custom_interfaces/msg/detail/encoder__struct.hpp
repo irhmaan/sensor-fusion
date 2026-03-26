@@ -42,7 +42,7 @@ struct Encoder_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->left_ticks = 0ll;
-      this->left_velocit = 0.0;
+      this->left_velocity = 0.0;
       this->right_ticks = 0ll;
       this->right_velocity = 0.0;
     }
@@ -55,7 +55,7 @@ struct Encoder_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->left_ticks = 0ll;
-      this->left_velocit = 0.0;
+      this->left_velocity = 0.0;
       this->right_ticks = 0ll;
       this->right_velocity = 0.0;
     }
@@ -65,9 +65,9 @@ struct Encoder_
   using _left_ticks_type =
     int64_t;
   _left_ticks_type left_ticks;
-  using _left_velocit_type =
+  using _left_velocity_type =
     double;
-  _left_velocit_type left_velocit;
+  _left_velocity_type left_velocity;
   using _right_ticks_type =
     int64_t;
   _right_ticks_type right_ticks;
@@ -82,10 +82,10 @@ struct Encoder_
     this->left_ticks = _arg;
     return *this;
   }
-  Type & set__left_velocit(
+  Type & set__left_velocity(
     const double & _arg)
   {
-    this->left_velocit = _arg;
+    this->left_velocity = _arg;
     return *this;
   }
   Type & set__right_ticks(
@@ -146,7 +146,7 @@ struct Encoder_
     if (this->left_ticks != other.left_ticks) {
       return false;
     }
-    if (this->left_velocit != other.left_velocit) {
+    if (this->left_velocity != other.left_velocity) {
       return false;
     }
     if (this->right_ticks != other.right_ticks) {

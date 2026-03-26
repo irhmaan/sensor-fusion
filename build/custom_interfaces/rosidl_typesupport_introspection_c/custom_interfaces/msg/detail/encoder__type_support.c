@@ -51,7 +51,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__msg_
     NULL  // resize(index) function pointer
   },
   {
-    "left_velocit",  // name
+    "left_velocity",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -59,7 +59,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__msg_
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces__msg__Encoder, left_velocit),  // bytes offset in struct
+    offsetof(custom_interfaces__msg__Encoder, left_velocity),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

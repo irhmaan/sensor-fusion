@@ -94,56 +94,56 @@ bool custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__resize_f
 size_t custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__size_function__Lidar__angles(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__int64__Sequence * member =
-    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__get_const_function__Lidar__angles(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__int64__Sequence * member =
-    (const rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__get_function__Lidar__angles(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__int64__Sequence * member =
-    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__fetch_function__Lidar__angles(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const int64_t * item =
-    ((const int64_t *)
+  const double * item =
+    ((const double *)
     custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__get_const_function__Lidar__angles(untyped_member, index));
-  int64_t * value =
-    (int64_t *)(untyped_value);
+  double * value =
+    (double *)(untyped_value);
   *value = *item;
 }
 
 void custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__assign_function__Lidar__angles(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  int64_t * item =
-    ((int64_t *)
+  double * item =
+    ((double *)
     custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__get_function__Lidar__angles(untyped_member, index));
-  const int64_t * value =
-    (const int64_t *)(untyped_value);
+  const double * value =
+    (const double *)(untyped_value);
   *item = *value;
 }
 
 bool custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__resize_function__Lidar__angles(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__int64__Sequence * member =
-    (rosidl_runtime_c__int64__Sequence *)(untyped_member);
-  rosidl_runtime_c__int64__Sequence__fini(member);
-  return rosidl_runtime_c__int64__Sequence__init(member, size);
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence__fini(member);
+  return rosidl_runtime_c__double__Sequence__init(member, size);
 }
 
 static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__msg__Lidar__rosidl_typesupport_introspection_c__Lidar_message_member_array[2] = {
@@ -167,7 +167,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__msg_
   },
   {
     "angles",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key

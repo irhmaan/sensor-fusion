@@ -36,17 +36,20 @@ cdr_serialize(
   const custom_interfaces::msg::IMU & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: name
-  cdr << ros_message.name;
+  // Member: accel
+  {
+    cdr << ros_message.accel;
+  }
 
-  // Member: x
-  cdr << ros_message.x;
+  // Member: gyro
+  {
+    cdr << ros_message.gyro;
+  }
 
-  // Member: y
-  cdr << ros_message.y;
-
-  // Member: z
-  cdr << ros_message.z;
+  // Member: mag
+  {
+    cdr << ros_message.mag;
+  }
 
   return true;
 }
@@ -57,17 +60,20 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces::msg::IMU & ros_message)
 {
-  // Member: name
-  cdr >> ros_message.name;
+  // Member: accel
+  {
+    cdr >> ros_message.accel;
+  }
 
-  // Member: x
-  cdr >> ros_message.x;
+  // Member: gyro
+  {
+    cdr >> ros_message.gyro;
+  }
 
-  // Member: y
-  cdr >> ros_message.y;
-
-  // Member: z
-  cdr >> ros_message.z;
+  // Member: mag
+  {
+    cdr >> ros_message.mag;
+  }
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -86,29 +92,27 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: name
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name.size() + 1);
-
-  // Member: x
+  // Member: accel
   {
-    size_t item_size = sizeof(ros_message.x);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    size_t item_size = sizeof(ros_message.accel[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: y
+  // Member: gyro
   {
-    size_t item_size = sizeof(ros_message.y);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    size_t item_size = sizeof(ros_message.gyro[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: z
+  // Member: mag
   {
-    size_t item_size = sizeof(ros_message.z);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    size_t item_size = sizeof(ros_message.mag[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -135,34 +139,23 @@ max_serialized_size_IMU(
   full_bounded = true;
   is_plain = true;
 
-  // Member: name
+  // Member: accel
   {
-    size_t array_size = 1;
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
-  // Member: x
-  {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: y
+  // Member: gyro
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: z
+  // Member: mag
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
@@ -176,7 +169,7 @@ max_serialized_size_IMU(
     using DataType = custom_interfaces::msg::IMU;
     is_plain =
       (
-      offsetof(DataType, z) +
+      offsetof(DataType, mag) +
       last_member_size
       ) == ret_val;
   }
@@ -190,17 +183,20 @@ cdr_serialize_key(
   const custom_interfaces::msg::IMU & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: name
-  cdr << ros_message.name;
+  // Member: accel
+  {
+    cdr << ros_message.accel;
+  }
 
-  // Member: x
-  cdr << ros_message.x;
+  // Member: gyro
+  {
+    cdr << ros_message.gyro;
+  }
 
-  // Member: y
-  cdr << ros_message.y;
-
-  // Member: z
-  cdr << ros_message.z;
+  // Member: mag
+  {
+    cdr << ros_message.mag;
+  }
 
   return true;
 }
@@ -218,29 +214,27 @@ get_serialized_size_key(
   (void)padding;
   (void)wchar_size;
 
-  // Member: name
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name.size() + 1);
-
-  // Member: x
+  // Member: accel
   {
-    size_t item_size = sizeof(ros_message.x);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    size_t item_size = sizeof(ros_message.accel[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: y
+  // Member: gyro
   {
-    size_t item_size = sizeof(ros_message.y);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    size_t item_size = sizeof(ros_message.gyro[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: z
+  // Member: mag
   {
-    size_t item_size = sizeof(ros_message.z);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    size_t item_size = sizeof(ros_message.mag[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -266,37 +260,25 @@ max_serialized_size_key_IMU(
   full_bounded = true;
   is_plain = true;
 
-  // Member: name
+  // Member: accel
   {
-    size_t array_size = 1;
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
-
-  // Member: x
-  {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: y
+  // Member: gyro
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: z
+  // Member: mag
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
@@ -310,7 +292,7 @@ max_serialized_size_key_IMU(
     using DataType = custom_interfaces::msg::IMU;
     is_plain =
       (
-      offsetof(DataType, z) +
+      offsetof(DataType, mag) +
       last_member_size
       ) == ret_val;
   }

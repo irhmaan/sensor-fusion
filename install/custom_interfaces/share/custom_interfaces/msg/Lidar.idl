@@ -10,7 +10,7 @@ module custom_interfaces {
     struct Lidar {
       sequence<double> distances;
 
-      sequence<int64> angles;
+      sequence<double> angles;
     };
   };
 };

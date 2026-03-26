@@ -128,14 +128,14 @@ bool custom_interfaces__msg__lidar__convert_from_py(PyObject * _pymsg, void * _r
         Py_DECREF(field);
         return false;
       }
-      Py_ssize_t size = view.len / sizeof(int64_t);
-      if (!rosidl_runtime_c__int64__Sequence__init(&(ros_message->angles), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create int64__Sequence ros_message");
+      Py_ssize_t size = view.len / sizeof(double);
+      if (!rosidl_runtime_c__double__Sequence__init(&(ros_message->angles), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create double__Sequence ros_message");
         PyBuffer_Release(&view);
         Py_DECREF(field);
         return false;
       }
-      int64_t * dest = ros_message->angles.data;
+      double * dest = ros_message->angles.data;
       rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
       if (rc < 0) {
         PyBuffer_Release(&view);
@@ -155,13 +155,13 @@ bool custom_interfaces__msg__lidar__convert_from_py(PyObject * _pymsg, void * _r
         Py_DECREF(field);
         return false;
       }
-      if (!rosidl_runtime_c__int64__Sequence__init(&(ros_message->angles), size)) {
-        PyErr_SetString(PyExc_RuntimeError, "unable to create int64__Sequence ros_message");
+      if (!rosidl_runtime_c__double__Sequence__init(&(ros_message->angles), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create double__Sequence ros_message");
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
       }
-      int64_t * dest = ros_message->angles.data;
+      double * dest = ros_message->angles.data;
       for (Py_ssize_t i = 0; i < size; ++i) {
         PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
         if (!item) {
@@ -169,9 +169,9 @@ bool custom_interfaces__msg__lidar__convert_from_py(PyObject * _pymsg, void * _r
           Py_DECREF(field);
           return false;
         }
-        assert(PyLong_Check(item));
-        int64_t tmp = PyLong_AsLongLong(item);
-        memcpy(&dest[i], &tmp, sizeof(int64_t));
+        assert(PyFloat_Check(item));
+        double tmp = PyFloat_AS_DOUBLE(item);
+        memcpy(&dest[i], &tmp, sizeof(double));
       }
       Py_DECREF(seq_field);
     }
@@ -270,7 +270,7 @@ PyObject * custom_interfaces__msg__lidar__convert_to_py(void * raw_ros_message)
     assert(itemsize_attr != NULL);
     size_t itemsize = PyLong_AsSize_t(itemsize_attr);
     Py_DECREF(itemsize_attr);
-    if (itemsize != sizeof(int64_t)) {
+    if (itemsize != sizeof(double)) {
       PyErr_SetString(PyExc_RuntimeError, "itemsize doesn't match expectation");
       Py_DECREF(field);
       return NULL;
@@ -299,8 +299,8 @@ PyObject * custom_interfaces__msg__lidar__convert_to_py(void * raw_ros_message)
       // populating the array.array using the frombytes method
       PyObject * frombytes = PyObject_GetAttrString(field, "frombytes");
       assert(frombytes != NULL);
-      int64_t * src = &(ros_message->angles.data[0]);
-      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->angles.size * sizeof(int64_t));
+      double * src = &(ros_message->angles.data[0]);
+      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->angles.size * sizeof(double));
       assert(data != NULL);
       PyObject * ret = PyObject_CallFunctionObjArgs(frombytes, data, NULL);
       Py_DECREF(data);

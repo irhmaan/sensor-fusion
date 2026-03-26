@@ -41,63 +41,54 @@ struct IMU_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
-      this->x = 0.0;
-      this->y = 0.0;
-      this->z = 0.0;
+      std::fill<typename std::array<double, 3>::iterator, double>(this->accel.begin(), this->accel.end(), 0.0);
+      std::fill<typename std::array<double, 3>::iterator, double>(this->gyro.begin(), this->gyro.end(), 0.0);
+      std::fill<typename std::array<double, 3>::iterator, double>(this->mag.begin(), this->mag.end(), 0.0);
     }
   }
 
   explicit IMU_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : name(_alloc)
+  : accel(_alloc),
+    gyro(_alloc),
+    mag(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
-      this->x = 0.0;
-      this->y = 0.0;
-      this->z = 0.0;
+      std::fill<typename std::array<double, 3>::iterator, double>(this->accel.begin(), this->accel.end(), 0.0);
+      std::fill<typename std::array<double, 3>::iterator, double>(this->gyro.begin(), this->gyro.end(), 0.0);
+      std::fill<typename std::array<double, 3>::iterator, double>(this->mag.begin(), this->mag.end(), 0.0);
     }
   }
 
   // field types and members
-  using _name_type =
-    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name_type name;
-  using _x_type =
-    double;
-  _x_type x;
-  using _y_type =
-    double;
-  _y_type y;
-  using _z_type =
-    double;
-  _z_type z;
+  using _accel_type =
+    std::array<double, 3>;
+  _accel_type accel;
+  using _gyro_type =
+    std::array<double, 3>;
+  _gyro_type gyro;
+  using _mag_type =
+    std::array<double, 3>;
+  _mag_type mag;
 
   // setters for named parameter idiom
-  Type & set__name(
-    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  Type & set__accel(
+    const std::array<double, 3> & _arg)
   {
-    this->name = _arg;
+    this->accel = _arg;
     return *this;
   }
-  Type & set__x(
-    const double & _arg)
+  Type & set__gyro(
+    const std::array<double, 3> & _arg)
   {
-    this->x = _arg;
+    this->gyro = _arg;
     return *this;
   }
-  Type & set__y(
-    const double & _arg)
+  Type & set__mag(
+    const std::array<double, 3> & _arg)
   {
-    this->y = _arg;
-    return *this;
-  }
-  Type & set__z(
-    const double & _arg)
-  {
-    this->z = _arg;
+    this->mag = _arg;
     return *this;
   }
 
@@ -143,16 +134,13 @@ struct IMU_
   // comparison operators
   bool operator==(const IMU_ & other) const
   {
-    if (this->name != other.name) {
+    if (this->accel != other.accel) {
       return false;
     }
-    if (this->x != other.x) {
+    if (this->gyro != other.gyro) {
       return false;
     }
-    if (this->y != other.y) {
-      return false;
-    }
-    if (this->z != other.z) {
+    if (this->mag != other.mag) {
       return false;
     }
     return true;

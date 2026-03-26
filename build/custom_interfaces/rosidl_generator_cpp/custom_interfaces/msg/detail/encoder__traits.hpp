@@ -35,10 +35,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: left_velocit
+  // member: left_velocity
   {
-    out << "left_velocit: ";
-    rosidl_generator_traits::value_to_yaml(msg.left_velocit, out);
+    out << "left_velocity: ";
+    rosidl_generator_traits::value_to_yaml(msg.left_velocity, out);
     out << ", ";
   }
 
@@ -71,13 +71,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: left_velocit
+  // member: left_velocity
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "left_velocit: ";
-    rosidl_generator_traits::value_to_yaml(msg.left_velocit, out);
+    out << "left_velocity: ";
+    rosidl_generator_traits::value_to_yaml(msg.left_velocity, out);
     out << "\n";
   }
 

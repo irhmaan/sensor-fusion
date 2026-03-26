@@ -59,13 +59,13 @@ bool custom_interfaces__msg__encoder__convert_from_py(PyObject * _pymsg, void * 
     ros_message->left_ticks = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
-  {  // left_velocit
-    PyObject * field = PyObject_GetAttrString(_pymsg, "left_velocit");
+  {  // left_velocity
+    PyObject * field = PyObject_GetAttrString(_pymsg, "left_velocity");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->left_velocit = PyFloat_AS_DOUBLE(field);
+    ros_message->left_velocity = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // right_ticks
@@ -119,11 +119,11 @@ PyObject * custom_interfaces__msg__encoder__convert_to_py(void * raw_ros_message
       }
     }
   }
-  {  // left_velocit
+  {  // left_velocity
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->left_velocit);
+    field = PyFloat_FromDouble(ros_message->left_velocity);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "left_velocit", field);
+      int rc = PyObject_SetAttrString(_pymessage, "left_velocity", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

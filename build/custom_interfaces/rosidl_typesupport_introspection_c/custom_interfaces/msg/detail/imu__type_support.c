@@ -12,10 +12,6 @@
 #include "custom_interfaces/msg/detail/imu__struct.h"
 
 
-// Include directives for member types
-// Member `name`
-#include "rosidl_runtime_c/string_functions.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -35,77 +31,194 @@ void custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__IMU_fini_f
   custom_interfaces__msg__IMU__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__IMU_message_member_array[4] = {
+size_t custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__size_function__IMU__accel(
+  const void * untyped_member)
+{
+  (void)untyped_member;
+  return 3;
+}
+
+const void * custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__accel(
+  const void * untyped_member, size_t index)
+{
+  const double * member =
+    (const double *)(untyped_member);
+  return &member[index];
+}
+
+void * custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__accel(
+  void * untyped_member, size_t index)
+{
+  double * member =
+    (double *)(untyped_member);
+  return &member[index];
+}
+
+void custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__fetch_function__IMU__accel(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__accel(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__assign_function__IMU__accel(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__accel(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+size_t custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__size_function__IMU__gyro(
+  const void * untyped_member)
+{
+  (void)untyped_member;
+  return 3;
+}
+
+const void * custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__gyro(
+  const void * untyped_member, size_t index)
+{
+  const double * member =
+    (const double *)(untyped_member);
+  return &member[index];
+}
+
+void * custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__gyro(
+  void * untyped_member, size_t index)
+{
+  double * member =
+    (double *)(untyped_member);
+  return &member[index];
+}
+
+void custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__fetch_function__IMU__gyro(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__gyro(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__assign_function__IMU__gyro(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__gyro(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+size_t custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__size_function__IMU__mag(
+  const void * untyped_member)
+{
+  (void)untyped_member;
+  return 3;
+}
+
+const void * custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__mag(
+  const void * untyped_member, size_t index)
+{
+  const double * member =
+    (const double *)(untyped_member);
+  return &member[index];
+}
+
+void * custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__mag(
+  void * untyped_member, size_t index)
+{
+  double * member =
+    (double *)(untyped_member);
+  return &member[index];
+}
+
+void custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__fetch_function__IMU__mag(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__mag(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__assign_function__IMU__mag(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__mag(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__IMU_message_member_array[3] = {
   {
-    "name",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(custom_interfaces__msg__IMU, name),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "x",  // name
+    "accel",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    3,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces__msg__IMU, x),  // bytes offset in struct
+    offsetof(custom_interfaces__msg__IMU, accel),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__size_function__IMU__accel,  // size() function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__accel,  // get_const(index) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__accel,  // get(index) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__fetch_function__IMU__accel,  // fetch(index, &value) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__assign_function__IMU__accel,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
-    "y",  // name
+    "gyro",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    3,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces__msg__IMU, y),  // bytes offset in struct
+    offsetof(custom_interfaces__msg__IMU, gyro),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__size_function__IMU__gyro,  // size() function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__gyro,  // get_const(index) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__gyro,  // get(index) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__fetch_function__IMU__gyro,  // fetch(index, &value) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__assign_function__IMU__gyro,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
-    "z",  // name
+    "mag",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    3,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces__msg__IMU, z),  // bytes offset in struct
+    offsetof(custom_interfaces__msg__IMU, mag),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__size_function__IMU__mag,  // size() function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_const_function__IMU__mag,  // get_const(index) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__get_function__IMU__mag,  // get(index) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__fetch_function__IMU__mag,  // fetch(index, &value) function pointer
+    custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__assign_function__IMU__mag,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };
@@ -113,7 +226,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_interfaces__msg_
 static const rosidl_typesupport_introspection_c__MessageMembers custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__IMU_message_members = {
   "custom_interfaces__msg",  // message namespace
   "IMU",  // message name
-  4,  // number of fields
+  3,  // number of fields
   sizeof(custom_interfaces__msg__IMU),
   false,  // has_any_key_member_
   custom_interfaces__msg__IMU__rosidl_typesupport_introspection_c__IMU_message_member_array,  // message members

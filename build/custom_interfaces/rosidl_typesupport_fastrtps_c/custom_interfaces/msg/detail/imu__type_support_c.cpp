@@ -36,8 +36,6 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // name
-#include "rosidl_runtime_c/string_functions.h"  // name
 
 // forward declare type support functions
 
@@ -50,33 +48,25 @@ bool cdr_serialize_custom_interfaces__msg__IMU(
   const custom_interfaces__msg__IMU * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: name
+  // Field name: accel
   {
-    const rosidl_runtime_c__String * str = &ros_message->name;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    size_t size = 3;
+    auto array_ptr = ros_message->accel;
+    cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: x
+  // Field name: gyro
   {
-    cdr << ros_message->x;
+    size_t size = 3;
+    auto array_ptr = ros_message->gyro;
+    cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: y
+  // Field name: mag
   {
-    cdr << ros_message->y;
-  }
-
-  // Field name: z
-  {
-    cdr << ros_message->z;
+    size_t size = 3;
+    auto array_ptr = ros_message->mag;
+    cdr.serialize_array(array_ptr, size);
   }
 
   return true;
@@ -87,35 +77,25 @@ bool cdr_deserialize_custom_interfaces__msg__IMU(
   eprosima::fastcdr::Cdr & cdr,
   custom_interfaces__msg__IMU * ros_message)
 {
-  // Field name: name
+  // Field name: accel
   {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->name.data) {
-      rosidl_runtime_c__String__init(&ros_message->name);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name'\n");
-      return false;
-    }
+    size_t size = 3;
+    auto array_ptr = ros_message->accel;
+    cdr.deserialize_array(array_ptr, size);
   }
 
-  // Field name: x
+  // Field name: gyro
   {
-    cdr >> ros_message->x;
+    size_t size = 3;
+    auto array_ptr = ros_message->gyro;
+    cdr.deserialize_array(array_ptr, size);
   }
 
-  // Field name: y
+  // Field name: mag
   {
-    cdr >> ros_message->y;
-  }
-
-  // Field name: z
-  {
-    cdr >> ros_message->z;
+    size_t size = 3;
+    auto array_ptr = ros_message->mag;
+    cdr.deserialize_array(array_ptr, size);
   }
 
   return true;
@@ -136,29 +116,33 @@ size_t get_serialized_size_custom_interfaces__msg__IMU(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: name
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name.size + 1);
-
-  // Field name: x
+  // Field name: accel
   {
-    size_t item_size = sizeof(ros_message->x);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    auto array_ptr = ros_message->accel;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: y
+  // Field name: gyro
   {
-    size_t item_size = sizeof(ros_message->y);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    auto array_ptr = ros_message->gyro;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: z
+  // Field name: mag
   {
-    size_t item_size = sizeof(ros_message->z);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    auto array_ptr = ros_message->mag;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -184,37 +168,25 @@ size_t max_serialized_size_custom_interfaces__msg__IMU(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: name
+  // Field name: accel
   {
-    size_t array_size = 1;
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
-
-  // Field name: x
-  {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: y
+  // Field name: gyro
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: z
+  // Field name: mag
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
@@ -229,7 +201,7 @@ size_t max_serialized_size_custom_interfaces__msg__IMU(
     using DataType = custom_interfaces__msg__IMU;
     is_plain =
       (
-      offsetof(DataType, z) +
+      offsetof(DataType, mag) +
       last_member_size
       ) == ret_val;
   }
@@ -241,33 +213,25 @@ bool cdr_serialize_key_custom_interfaces__msg__IMU(
   const custom_interfaces__msg__IMU * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: name
+  // Field name: accel
   {
-    const rosidl_runtime_c__String * str = &ros_message->name;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    size_t size = 3;
+    auto array_ptr = ros_message->accel;
+    cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: x
+  // Field name: gyro
   {
-    cdr << ros_message->x;
+    size_t size = 3;
+    auto array_ptr = ros_message->gyro;
+    cdr.serialize_array(array_ptr, size);
   }
 
-  // Field name: y
+  // Field name: mag
   {
-    cdr << ros_message->y;
-  }
-
-  // Field name: z
-  {
-    cdr << ros_message->z;
+    size_t size = 3;
+    auto array_ptr = ros_message->mag;
+    cdr.serialize_array(array_ptr, size);
   }
 
   return true;
@@ -288,29 +252,33 @@ size_t get_serialized_size_key_custom_interfaces__msg__IMU(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: name
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name.size + 1);
-
-  // Field name: x
+  // Field name: accel
   {
-    size_t item_size = sizeof(ros_message->x);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    auto array_ptr = ros_message->accel;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: y
+  // Field name: gyro
   {
-    size_t item_size = sizeof(ros_message->y);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    auto array_ptr = ros_message->gyro;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: z
+  // Field name: mag
   {
-    size_t item_size = sizeof(ros_message->z);
-    current_alignment += item_size +
+    size_t array_size = 3;
+    auto array_ptr = ros_message->mag;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -334,37 +302,25 @@ size_t max_serialized_size_key_custom_interfaces__msg__IMU(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: name
+  // Field name: accel
   {
-    size_t array_size = 1;
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
-
-  // Field name: x
-  {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: y
+  // Field name: gyro
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: z
+  // Field name: mag
   {
-    size_t array_size = 1;
+    size_t array_size = 3;
     last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
@@ -378,7 +334,7 @@ size_t max_serialized_size_key_custom_interfaces__msg__IMU(
     using DataType = custom_interfaces__msg__IMU;
     is_plain =
       (
-      offsetof(DataType, z) +
+      offsetof(DataType, mag) +
       last_member_size
       ) == ret_val;
   }

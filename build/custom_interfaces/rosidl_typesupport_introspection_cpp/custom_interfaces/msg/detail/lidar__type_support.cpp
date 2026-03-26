@@ -85,46 +85,46 @@ void resize_function__Lidar__distances(void * untyped_member, size_t size)
 
 size_t size_function__Lidar__angles(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<int64_t> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__Lidar__angles(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<int64_t> *>(untyped_member);
+    *reinterpret_cast<const std::vector<double> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__Lidar__angles(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<int64_t> *>(untyped_member);
+    *reinterpret_cast<std::vector<double> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__Lidar__angles(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const int64_t *>(
+  const auto & item = *reinterpret_cast<const double *>(
     get_const_function__Lidar__angles(untyped_member, index));
-  auto & value = *reinterpret_cast<int64_t *>(untyped_value);
+  auto & value = *reinterpret_cast<double *>(untyped_value);
   value = item;
 }
 
 void assign_function__Lidar__angles(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<int64_t *>(
+  auto & item = *reinterpret_cast<double *>(
     get_function__Lidar__angles(untyped_member, index));
-  const auto & value = *reinterpret_cast<const int64_t *>(untyped_value);
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
   item = value;
 }
 
 void resize_function__Lidar__angles(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<int64_t> *>(untyped_member);
+    reinterpret_cast<std::vector<double> *>(untyped_member);
   member->resize(size);
 }
 
@@ -149,7 +149,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Lidar_message
   },
   {
     "angles",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key

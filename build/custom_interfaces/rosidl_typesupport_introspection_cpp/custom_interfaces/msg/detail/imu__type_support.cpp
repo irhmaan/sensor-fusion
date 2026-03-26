@@ -38,77 +38,173 @@ void IMU_fini_function(void * message_memory)
   typed_message->~IMU();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember IMU_message_member_array[4] = {
+size_t size_function__IMU__accel(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 3;
+}
+
+const void * get_const_function__IMU__accel(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<double, 3> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__IMU__accel(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<double, 3> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__IMU__accel(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__IMU__accel(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__IMU__accel(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__IMU__accel(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
+size_t size_function__IMU__gyro(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 3;
+}
+
+const void * get_const_function__IMU__gyro(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<double, 3> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__IMU__gyro(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<double, 3> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__IMU__gyro(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__IMU__gyro(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__IMU__gyro(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__IMU__gyro(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
+size_t size_function__IMU__mag(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 3;
+}
+
+const void * get_const_function__IMU__mag(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<double, 3> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__IMU__mag(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<double, 3> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__IMU__mag(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__IMU__mag(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__IMU__mag(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__IMU__mag(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember IMU_message_member_array[3] = {
   {
-    "name",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(custom_interfaces::msg::IMU, name),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "x",  // name
+    "accel",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    3,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::IMU, x),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::IMU, accel),  // bytes offset in struct
     nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
+    size_function__IMU__accel,  // size() function pointer
+    get_const_function__IMU__accel,  // get_const(index) function pointer
+    get_function__IMU__accel,  // get(index) function pointer
+    fetch_function__IMU__accel,  // fetch(index, &value) function pointer
+    assign_function__IMU__accel,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
-    "y",  // name
+    "gyro",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    3,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::IMU, y),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::IMU, gyro),  // bytes offset in struct
     nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
+    size_function__IMU__gyro,  // size() function pointer
+    get_const_function__IMU__gyro,  // get_const(index) function pointer
+    get_function__IMU__gyro,  // get(index) function pointer
+    fetch_function__IMU__gyro,  // fetch(index, &value) function pointer
+    assign_function__IMU__gyro,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
-    "z",  // name
+    "mag",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is key
-    false,  // is array
-    0,  // array size
+    true,  // is array
+    3,  // array size
     false,  // is upper bound
-    offsetof(custom_interfaces::msg::IMU, z),  // bytes offset in struct
+    offsetof(custom_interfaces::msg::IMU, mag),  // bytes offset in struct
     nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
+    size_function__IMU__mag,  // size() function pointer
+    get_const_function__IMU__mag,  // get_const(index) function pointer
+    get_function__IMU__mag,  // get(index) function pointer
+    fetch_function__IMU__mag,  // fetch(index, &value) function pointer
+    assign_function__IMU__mag,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   }
 };
@@ -116,7 +212,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember IMU_message_m
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers IMU_message_members = {
   "custom_interfaces::msg",  // message namespace
   "IMU",  // message name
-  4,  // number of fields
+  3,  // number of fields
   sizeof(custom_interfaces::msg::IMU),
   false,  // has_any_key_member_
   IMU_message_member_array,  // message members

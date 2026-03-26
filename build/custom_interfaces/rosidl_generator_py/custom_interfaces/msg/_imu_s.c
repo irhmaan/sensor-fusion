@@ -16,8 +16,8 @@
 #include "custom_interfaces/msg/detail/imu__struct.h"
 #include "custom_interfaces/msg/detail/imu__functions.h"
 
-#include "rosidl_runtime_c/string.h"
-#include "rosidl_runtime_c/string_functions.h"
+#include "rosidl_runtime_c/primitives_sequence.h"
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 
 ROSIDL_GENERATOR_C_EXPORT
@@ -53,46 +53,76 @@ bool custom_interfaces__msg__imu__convert_from_py(PyObject * _pymsg, void * _ros
     assert(strncmp("custom_interfaces.msg._imu.IMU", full_classname_dest, 30) == 0);
   }
   custom_interfaces__msg__IMU * ros_message = _ros_message;
-  {  // name
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name");
+  {  // accel
+    PyObject * field = PyObject_GetAttrString(_pymsg, "accel");
     if (!field) {
       return false;
     }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
-      Py_DECREF(field);
-      return false;
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+      Py_ssize_t size = 3;
+      double * dest = ros_message->accel;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        double tmp = *(npy_float64 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(double));
+      }
+      Py_DECREF(seq_field);
     }
-    rosidl_runtime_c__String__assign(&ros_message->name, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
-  {  // x
-    PyObject * field = PyObject_GetAttrString(_pymsg, "x");
+  {  // gyro
+    PyObject * field = PyObject_GetAttrString(_pymsg, "gyro");
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->x = PyFloat_AS_DOUBLE(field);
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+      Py_ssize_t size = 3;
+      double * dest = ros_message->gyro;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        double tmp = *(npy_float64 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(double));
+      }
+      Py_DECREF(seq_field);
+    }
     Py_DECREF(field);
   }
-  {  // y
-    PyObject * field = PyObject_GetAttrString(_pymsg, "y");
+  {  // mag
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mag");
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->y = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // z
-    PyObject * field = PyObject_GetAttrString(_pymsg, "z");
-    if (!field) {
-      return false;
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+      Py_ssize_t size = 3;
+      double * dest = ros_message->mag;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        double tmp = *(npy_float64 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(double));
+      }
+      Py_DECREF(seq_field);
     }
-    assert(PyFloat_Check(field));
-    ros_message->z = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -117,55 +147,59 @@ PyObject * custom_interfaces__msg__imu__convert_to_py(void * raw_ros_message)
     }
   }
   custom_interfaces__msg__IMU * ros_message = (custom_interfaces__msg__IMU *)raw_ros_message;
-  {  // name
+  {  // accel
     PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->name.data,
-      strlen(ros_message->name.data),
-      "replace");
+    field = PyObject_GetAttrString(_pymessage, "accel");
     if (!field) {
       return NULL;
     }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "name", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+    assert(sizeof(npy_float64) == sizeof(double));
+    npy_float64 * dst = (npy_float64 *)PyArray_GETPTR1(seq_field, 0);
+    double * src = &(ros_message->accel[0]);
+    memcpy(dst, src, 3 * sizeof(double));
+    Py_DECREF(field);
   }
-  {  // x
+  {  // gyro
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->x);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "x", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
+    field = PyObject_GetAttrString(_pymessage, "gyro");
+    if (!field) {
+      return NULL;
     }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+    assert(sizeof(npy_float64) == sizeof(double));
+    npy_float64 * dst = (npy_float64 *)PyArray_GETPTR1(seq_field, 0);
+    double * src = &(ros_message->gyro[0]);
+    memcpy(dst, src, 3 * sizeof(double));
+    Py_DECREF(field);
   }
-  {  // y
+  {  // mag
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->y);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "y", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
+    field = PyObject_GetAttrString(_pymessage, "mag");
+    if (!field) {
+      return NULL;
     }
-  }
-  {  // z
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->z);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "z", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+    assert(sizeof(npy_float64) == sizeof(double));
+    npy_float64 * dst = (npy_float64 *)PyArray_GETPTR1(seq_field, 0);
+    double * src = &(ros_message->mag[0]);
+    memcpy(dst, src, 3 * sizeof(double));
+    Py_DECREF(field);
   }
 
   // ownership of _pymessage is transferred to the caller

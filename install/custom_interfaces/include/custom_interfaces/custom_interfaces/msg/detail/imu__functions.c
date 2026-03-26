@@ -11,24 +11,15 @@
 #include "rcutils/allocator.h"
 
 
-// Include directives for member types
-// Member `name`
-#include "rosidl_runtime_c/string_functions.h"
-
 bool
 custom_interfaces__msg__IMU__init(custom_interfaces__msg__IMU * msg)
 {
   if (!msg) {
     return false;
   }
-  // name
-  if (!rosidl_runtime_c__String__init(&msg->name)) {
-    custom_interfaces__msg__IMU__fini(msg);
-    return false;
-  }
-  // x
-  // y
-  // z
+  // accel
+  // gyro
+  // mag
   return true;
 }
 
@@ -38,11 +29,9 @@ custom_interfaces__msg__IMU__fini(custom_interfaces__msg__IMU * msg)
   if (!msg) {
     return;
   }
-  // name
-  rosidl_runtime_c__String__fini(&msg->name);
-  // x
-  // y
-  // z
+  // accel
+  // gyro
+  // mag
 }
 
 bool
@@ -51,23 +40,23 @@ custom_interfaces__msg__IMU__are_equal(const custom_interfaces__msg__IMU * lhs, 
   if (!lhs || !rhs) {
     return false;
   }
-  // name
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name), &(rhs->name)))
-  {
-    return false;
+  // accel
+  for (size_t i = 0; i < 3; ++i) {
+    if (lhs->accel[i] != rhs->accel[i]) {
+      return false;
+    }
   }
-  // x
-  if (lhs->x != rhs->x) {
-    return false;
+  // gyro
+  for (size_t i = 0; i < 3; ++i) {
+    if (lhs->gyro[i] != rhs->gyro[i]) {
+      return false;
+    }
   }
-  // y
-  if (lhs->y != rhs->y) {
-    return false;
-  }
-  // z
-  if (lhs->z != rhs->z) {
-    return false;
+  // mag
+  for (size_t i = 0; i < 3; ++i) {
+    if (lhs->mag[i] != rhs->mag[i]) {
+      return false;
+    }
   }
   return true;
 }
@@ -80,18 +69,18 @@ custom_interfaces__msg__IMU__copy(
   if (!input || !output) {
     return false;
   }
-  // name
-  if (!rosidl_runtime_c__String__copy(
-      &(input->name), &(output->name)))
-  {
-    return false;
+  // accel
+  for (size_t i = 0; i < 3; ++i) {
+    output->accel[i] = input->accel[i];
   }
-  // x
-  output->x = input->x;
-  // y
-  output->y = input->y;
-  // z
-  output->z = input->z;
+  // gyro
+  for (size_t i = 0; i < 3; ++i) {
+    output->gyro[i] = input->gyro[i];
+  }
+  // mag
+  for (size_t i = 0; i < 3; ++i) {
+    output->mag[i] = input->mag[i];
+  }
   return true;
 }
 

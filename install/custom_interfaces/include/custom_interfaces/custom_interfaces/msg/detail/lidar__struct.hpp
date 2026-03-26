@@ -52,7 +52,7 @@ struct Lidar_
     std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _distances_type distances;
   using _angles_type =
-    std::vector<int64_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int64_t>>;
+    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _angles_type angles;
 
   // setters for named parameter idiom
@@ -63,7 +63,7 @@ struct Lidar_
     return *this;
   }
   Type & set__angles(
-    const std::vector<int64_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int64_t>> & _arg)
+    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
   {
     this->angles = _arg;
     return *this;

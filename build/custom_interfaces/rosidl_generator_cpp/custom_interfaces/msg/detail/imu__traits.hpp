@@ -28,31 +28,57 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: name
+  // member: accel
   {
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    if (msg.accel.size() == 0) {
+      out << "accel: []";
+    } else {
+      out << "accel: [";
+      size_t pending_items = msg.accel.size();
+      for (auto item : msg.accel) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
     out << ", ";
   }
 
-  // member: x
+  // member: gyro
   {
-    out << "x: ";
-    rosidl_generator_traits::value_to_yaml(msg.x, out);
+    if (msg.gyro.size() == 0) {
+      out << "gyro: []";
+    } else {
+      out << "gyro: [";
+      size_t pending_items = msg.gyro.size();
+      for (auto item : msg.gyro) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
     out << ", ";
   }
 
-  // member: y
+  // member: mag
   {
-    out << "y: ";
-    rosidl_generator_traits::value_to_yaml(msg.y, out);
-    out << ", ";
-  }
-
-  // member: z
-  {
-    out << "z: ";
-    rosidl_generator_traits::value_to_yaml(msg.z, out);
+    if (msg.mag.size() == 0) {
+      out << "mag: []";
+    } else {
+      out << "mag: [";
+      size_t pending_items = msg.mag.size();
+      for (auto item : msg.mag) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -61,44 +87,64 @@ inline void to_block_style_yaml(
   const IMU & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: name
+  // member: accel
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
-    out << "\n";
+    if (msg.accel.size() == 0) {
+      out << "accel: []\n";
+    } else {
+      out << "accel:\n";
+      for (auto item : msg.accel) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
   }
 
-  // member: x
+  // member: gyro
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "x: ";
-    rosidl_generator_traits::value_to_yaml(msg.x, out);
-    out << "\n";
+    if (msg.gyro.size() == 0) {
+      out << "gyro: []\n";
+    } else {
+      out << "gyro:\n";
+      for (auto item : msg.gyro) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
   }
 
-  // member: y
+  // member: mag
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "y: ";
-    rosidl_generator_traits::value_to_yaml(msg.y, out);
-    out << "\n";
-  }
-
-  // member: z
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
+    if (msg.mag.size() == 0) {
+      out << "mag: []\n";
+    } else {
+      out << "mag:\n";
+      for (auto item : msg.mag) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
     }
-    out << "z: ";
-    rosidl_generator_traits::value_to_yaml(msg.z, out);
-    out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 
@@ -148,11 +194,11 @@ inline const char * name<custom_interfaces::msg::IMU>()
 
 template<>
 struct has_fixed_size<custom_interfaces::msg::IMU>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<custom_interfaces::msg::IMU>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<custom_interfaces::msg::IMU>

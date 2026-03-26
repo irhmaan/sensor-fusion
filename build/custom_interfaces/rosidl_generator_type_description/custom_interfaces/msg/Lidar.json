@@ -16,7 +16,7 @@
         {
           "name": "angles",
           "type": {
-            "type_id": 152,
+            "type_id": 155,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -30,7 +30,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/msg/Lidar",
-      "hash_string": "RIHS01_fb8b18acf5eb6e2e498a1d2de3930e181ade67944c507b3620db64aa31df9bc2"
+      "hash_string": "RIHS01_3cdce3313c0bf5725863d44d52b5fa10040f9d73a692ff682c002e248c6a9360"
     }
   ]
 }

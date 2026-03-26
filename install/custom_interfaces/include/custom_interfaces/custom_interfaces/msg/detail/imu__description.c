@@ -11,10 +11,10 @@ custom_interfaces__msg__IMU__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x72, 0xd5, 0x73, 0x30, 0x2b, 0x94, 0xf8, 0x11,
-      0x9f, 0xec, 0xec, 0xa5, 0xcc, 0x3a, 0x74, 0x70,
-      0x22, 0x1e, 0xcf, 0x58, 0xd6, 0xbf, 0x54, 0x5f,
-      0x83, 0xbe, 0x09, 0x9e, 0x46, 0x53, 0xbe, 0xe1,
+      0xfa, 0x7a, 0x7f, 0x2e, 0x26, 0x6c, 0x3c, 0xbd,
+      0x0d, 0xe2, 0x81, 0x35, 0x1d, 0xbb, 0x94, 0x3d,
+      0xd3, 0x91, 0x1b, 0x53, 0x74, 0x8d, 0xd4, 0x8b,
+      0x07, 0x7f, 0xcb, 0x56, 0xf7, 0xe9, 0x8b, 0x8f,
     }};
   return &hash;
 }
@@ -31,47 +31,36 @@ custom_interfaces__msg__IMU__get_type_hash(
 static char custom_interfaces__msg__IMU__TYPE_NAME[] = "custom_interfaces/msg/IMU";
 
 // Define type names, field names, and default values
-static char custom_interfaces__msg__IMU__FIELD_NAME__name[] = "name";
-static char custom_interfaces__msg__IMU__FIELD_NAME__x[] = "x";
-static char custom_interfaces__msg__IMU__FIELD_NAME__y[] = "y";
-static char custom_interfaces__msg__IMU__FIELD_NAME__z[] = "z";
+static char custom_interfaces__msg__IMU__FIELD_NAME__accel[] = "accel";
+static char custom_interfaces__msg__IMU__FIELD_NAME__gyro[] = "gyro";
+static char custom_interfaces__msg__IMU__FIELD_NAME__mag[] = "mag";
 
 static rosidl_runtime_c__type_description__Field custom_interfaces__msg__IMU__FIELDS[] = {
   {
-    {custom_interfaces__msg__IMU__FIELD_NAME__name, 4, 4},
+    {custom_interfaces__msg__IMU__FIELD_NAME__accel, 5, 5},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
-      0,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_ARRAY,
+      3,
       0,
       {NULL, 0, 0},
     },
     {NULL, 0, 0},
   },
   {
-    {custom_interfaces__msg__IMU__FIELD_NAME__x, 1, 1},
+    {custom_interfaces__msg__IMU__FIELD_NAME__gyro, 4, 4},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
-      0,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_ARRAY,
+      3,
       0,
       {NULL, 0, 0},
     },
     {NULL, 0, 0},
   },
   {
-    {custom_interfaces__msg__IMU__FIELD_NAME__y, 1, 1},
+    {custom_interfaces__msg__IMU__FIELD_NAME__mag, 3, 3},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {custom_interfaces__msg__IMU__FIELD_NAME__z, 1, 1},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
-      0,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_ARRAY,
+      3,
       0,
       {NULL, 0, 0},
     },
@@ -88,7 +77,7 @@ custom_interfaces__msg__IMU__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {custom_interfaces__msg__IMU__TYPE_NAME, 25, 25},
-      {custom_interfaces__msg__IMU__FIELDS, 4, 4},
+      {custom_interfaces__msg__IMU__FIELDS, 3, 3},
     },
     {NULL, 0, 0},
   };
@@ -100,10 +89,9 @@ custom_interfaces__msg__IMU__get_type_description(
 
 static char toplevel_type_raw_source[] =
   "#IMU Sensor\n"
-  "string name\n"
-  "float64 x\n"
-  "float64 y\n"
-  "float64 z";
+  "float64[3] accel\n"
+  "float64[3] gyro\n"
+  "float64[3] mag";
 
 static char msg_encoding[] = "msg";
 
@@ -117,7 +105,7 @@ custom_interfaces__msg__IMU__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {custom_interfaces__msg__IMU__TYPE_NAME, 25, 25},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 54, 54},
+    {toplevel_type_raw_source, 60, 60},
   };
   return &source;
 }

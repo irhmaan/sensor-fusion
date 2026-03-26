@@ -65,7 +65,7 @@ class Encoder(metaclass=Metaclass_Encoder):
 
     __slots__ = [
         '_left_ticks',
-        '_left_velocit',
+        '_left_velocity',
         '_right_ticks',
         '_right_velocity',
         '_check_fields',
@@ -73,7 +73,7 @@ class Encoder(metaclass=Metaclass_Encoder):
 
     _fields_and_field_types = {
         'left_ticks': 'int64',
-        'left_velocit': 'double',
+        'left_velocity': 'double',
         'right_ticks': 'int64',
         'right_velocity': 'double',
     }
@@ -97,7 +97,7 @@ class Encoder(metaclass=Metaclass_Encoder):
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.left_ticks = kwargs.get('left_ticks', int())
-        self.left_velocit = kwargs.get('left_velocit', float())
+        self.left_velocity = kwargs.get('left_velocity', float())
         self.right_ticks = kwargs.get('right_ticks', int())
         self.right_velocity = kwargs.get('right_velocity', float())
 
@@ -133,7 +133,7 @@ class Encoder(metaclass=Metaclass_Encoder):
             return False
         if self.left_ticks != other.left_ticks:
             return False
-        if self.left_velocit != other.left_velocit:
+        if self.left_velocity != other.left_velocity:
             return False
         if self.right_ticks != other.right_ticks:
             return False
@@ -162,19 +162,19 @@ class Encoder(metaclass=Metaclass_Encoder):
         self._left_ticks = value
 
     @builtins.property
-    def left_velocit(self):
-        """Message field 'left_velocit'."""
-        return self._left_velocit
+    def left_velocity(self):
+        """Message field 'left_velocity'."""
+        return self._left_velocity
 
-    @left_velocit.setter
-    def left_velocit(self, value):
+    @left_velocity.setter
+    def left_velocity(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'left_velocit' field must be of type 'float'"
+                "The 'left_velocity' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'left_velocit' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._left_velocit = value
+                "The 'left_velocity' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._left_velocity = value
 
     @builtins.property
     def right_ticks(self):

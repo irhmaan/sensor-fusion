@@ -5,16 +5,15 @@
 
 module custom_interfaces {
   module msg {
+    typedef double double__3[3];
     @verbatim (language="comment", text=
       "IMU Sensor")
     struct IMU {
-      string name;
+      double__3 accel;
 
-      double x;
+      double__3 gyro;
 
-      double y;
-
-      double z;
+      double__3 mag;
     };
   };
 };

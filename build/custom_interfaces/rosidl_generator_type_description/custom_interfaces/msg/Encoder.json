@@ -14,7 +14,7 @@
           "default_value": ""
         },
         {
-          "name": "left_velocit",
+          "name": "left_velocity",
           "type": {
             "type_id": 11,
             "capacity": 0,
@@ -50,7 +50,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/msg/Encoder",
-      "hash_string": "RIHS01_f8378422bcd650434ba82de810fc32d3faca9f8a3e55bce239695b6695f56f65"
+      "hash_string": "RIHS01_101d5cf4502c6c37ddd0cb849785f5fa54fb111ae91b98a6b87e8cda7407779a"
     }
   ]
 }

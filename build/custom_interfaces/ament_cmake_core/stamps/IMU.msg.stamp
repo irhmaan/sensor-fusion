@@ -1,5 +1,4 @@
 #IMU Sensor
-string name
-float64 x
-float64 y
-float64 z
+float64[3] accel
+float64[3] gyro
+float64[3] mag

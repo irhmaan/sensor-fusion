@@ -31,9 +31,33 @@ ament_target_dependencies(odometry_node rclcpp custom_interfaces random_numbers)
 add_executable(battery_node src/battery.cpp)
 ament_target_dependencies(battery_node rclcpp custom_interfaces random_numbers)
 
+add_executable(distance_sensors_node src/distance_sensors.cpp)
+ament_target_dependencies(distance_sensors_node rclcpp custom_interfaces random_numbers)
+
+add_executable(environment_node src/environment.cpp)
+ament_target_dependencies(environment_node rclcpp custom_interfaces random_numbers)
+
+add_executable(imu_node src/imu.cpp)
+ament_target_dependencies(imu_node rclcpp custom_interfaces random_numbers)
+
+add_executable(motors_node src/motors.cpp)
+ament_target_dependencies(motors_node rclcpp custom_interfaces random_numbers)
+
+add_executable(lidar_node src/lidar.cpp)
+ament_target_dependencies(lidar_node rclcpp custom_interfaces random_numbers)
+
+add_executable(whl_encoders_node src/whl_encoders.cpp)
+ament_target_dependencies(whl_encoders_node rclcpp custom_interfaces random_numbers)
+
 install(TARGETS 
 odometry_node
 battery_node
+distance_sensors_node
+environment_node
+imu_node
+lidar_node
+motors_node
+whl_encoders_node
 DESTINATION lib/${PROJECT_NAME}
 )
 

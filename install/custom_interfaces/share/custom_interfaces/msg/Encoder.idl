@@ -10,7 +10,7 @@ module custom_interfaces {
     struct Encoder {
       int64 left_ticks;
 
-      double left_velocit;
+      double left_velocity;
 
       int64 right_ticks;
 

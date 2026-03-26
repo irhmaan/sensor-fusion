@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
 #include "custom_interfaces/msg/detail/odometry__struct.h"
 #include "custom_interfaces/msg/detail/odometry__type_support.h"
 #include "custom_interfaces/msg/detail/odometry__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -19,20 +19,15 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'name'
-#include "rosidl_runtime_c/string.h"
-
 /// Struct defined in msg/IMU in the package custom_interfaces.
 /**
   * IMU Sensor
  */
 typedef struct custom_interfaces__msg__IMU
 {
-  rosidl_runtime_c__String name;
-  double x;
-  double y;
-  double z;
+  double accel[3];
+  double gyro[3];
+  double mag[3];
 } custom_interfaces__msg__IMU;
 
 // Struct for a sequence of custom_interfaces__msg__IMU.

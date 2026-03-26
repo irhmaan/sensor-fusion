@@ -16,6 +16,11 @@ import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
 
+# Member 'accel'
+# Member 'gyro'
+# Member 'mag'
+import numpy  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -64,27 +69,24 @@ class IMU(metaclass=Metaclass_IMU):
     """Message class 'IMU'."""
 
     __slots__ = [
-        '_name',
-        '_x',
-        '_y',
-        '_z',
+        '_accel',
+        '_gyro',
+        '_mag',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'name': 'string',
-        'x': 'double',
-        'y': 'double',
-        'z': 'double',
+        'accel': 'double[3]',
+        'gyro': 'double[3]',
+        'mag': 'double[3]',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 3),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 3),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 3),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -96,10 +98,21 @@ class IMU(metaclass=Metaclass_IMU):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.name = kwargs.get('name', str())
-        self.x = kwargs.get('x', float())
-        self.y = kwargs.get('y', float())
-        self.z = kwargs.get('z', float())
+        if 'accel' not in kwargs:
+            self.accel = numpy.zeros(3, dtype=numpy.float64)
+        else:
+            self.accel = numpy.array(kwargs.get('accel'), dtype=numpy.float64)
+            assert self.accel.shape == (3, )
+        if 'gyro' not in kwargs:
+            self.gyro = numpy.zeros(3, dtype=numpy.float64)
+        else:
+            self.gyro = numpy.array(kwargs.get('gyro'), dtype=numpy.float64)
+            assert self.gyro.shape == (3, )
+        if 'mag' not in kwargs:
+            self.mag = numpy.zeros(3, dtype=numpy.float64)
+        else:
+            self.mag = numpy.array(kwargs.get('mag'), dtype=numpy.float64)
+            assert self.mag.shape == (3, )
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -131,13 +144,11 @@ class IMU(metaclass=Metaclass_IMU):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.name != other.name:
+        if any(self.accel != other.accel):
             return False
-        if self.x != other.x:
+        if any(self.gyro != other.gyro):
             return False
-        if self.y != other.y:
-            return False
-        if self.z != other.z:
+        if any(self.mag != other.mag):
             return False
         return True
 
@@ -147,59 +158,94 @@ class IMU(metaclass=Metaclass_IMU):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def name(self):
-        """Message field 'name'."""
-        return self._name
+    def accel(self):
+        """Message field 'accel'."""
+        return self._accel
 
-    @name.setter
-    def name(self, value):
+    @accel.setter
+    def accel(self, value):
         if self._check_fields:
+            if isinstance(value, numpy.ndarray):
+                assert value.dtype == numpy.float64, \
+                    "The 'accel' numpy.ndarray() must have the dtype of 'numpy.float64'"
+                assert value.size == 3, \
+                    "The 'accel' numpy.ndarray() must have a size of 3"
+                self._accel = value
+                return
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
             assert \
-                isinstance(value, str), \
-                "The 'name' field must be of type 'str'"
-        self._name = value
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 3 and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'accel' field must be a set or sequence with length 3 and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._accel = numpy.array(value, dtype=numpy.float64)
 
     @builtins.property
-    def x(self):
-        """Message field 'x'."""
-        return self._x
+    def gyro(self):
+        """Message field 'gyro'."""
+        return self._gyro
 
-    @x.setter
-    def x(self, value):
+    @gyro.setter
+    def gyro(self, value):
         if self._check_fields:
+            if isinstance(value, numpy.ndarray):
+                assert value.dtype == numpy.float64, \
+                    "The 'gyro' numpy.ndarray() must have the dtype of 'numpy.float64'"
+                assert value.size == 3, \
+                    "The 'gyro' numpy.ndarray() must have a size of 3"
+                self._gyro = value
+                return
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
             assert \
-                isinstance(value, float), \
-                "The 'x' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._x = value
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 3 and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'gyro' field must be a set or sequence with length 3 and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._gyro = numpy.array(value, dtype=numpy.float64)
 
     @builtins.property
-    def y(self):
-        """Message field 'y'."""
-        return self._y
+    def mag(self):
+        """Message field 'mag'."""
+        return self._mag
 
-    @y.setter
-    def y(self, value):
+    @mag.setter
+    def mag(self, value):
         if self._check_fields:
+            if isinstance(value, numpy.ndarray):
+                assert value.dtype == numpy.float64, \
+                    "The 'mag' numpy.ndarray() must have the dtype of 'numpy.float64'"
+                assert value.size == 3, \
+                    "The 'mag' numpy.ndarray() must have a size of 3"
+                self._mag = value
+                return
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
             assert \
-                isinstance(value, float), \
-                "The 'y' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._y = value
-
-    @builtins.property
-    def z(self):
-        """Message field 'z'."""
-        return self._z
-
-    @z.setter
-    def z(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, float), \
-                "The 'z' field must be of type 'float'"
-            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._z = value
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 3 and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'mag' field must be a set or sequence with length 3 and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._mag = numpy.array(value, dtype=numpy.float64)

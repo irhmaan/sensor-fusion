@@ -11,10 +11,10 @@ custom_interfaces__msg__Encoder__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xf8, 0x37, 0x84, 0x22, 0xbc, 0xd6, 0x50, 0x43,
-      0x4b, 0xa8, 0x2d, 0xe8, 0x10, 0xfc, 0x32, 0xd3,
-      0xfa, 0xca, 0x9f, 0x8a, 0x3e, 0x55, 0xbc, 0xe2,
-      0x39, 0x69, 0x5b, 0x66, 0x95, 0xf5, 0x6f, 0x65,
+      0x10, 0x1d, 0x5c, 0xf4, 0x50, 0x2c, 0x6c, 0x37,
+      0xdd, 0xd0, 0xcb, 0x84, 0x97, 0x85, 0xf5, 0xfa,
+      0x54, 0xfb, 0x11, 0x1a, 0xe9, 0x1b, 0x98, 0xa6,
+      0xb8, 0x7e, 0x8c, 0xda, 0x74, 0x07, 0x77, 0x9a,
     }};
   return &hash;
 }
@@ -32,7 +32,7 @@ static char custom_interfaces__msg__Encoder__TYPE_NAME[] = "custom_interfaces/ms
 
 // Define type names, field names, and default values
 static char custom_interfaces__msg__Encoder__FIELD_NAME__left_ticks[] = "left_ticks";
-static char custom_interfaces__msg__Encoder__FIELD_NAME__left_velocit[] = "left_velocit";
+static char custom_interfaces__msg__Encoder__FIELD_NAME__left_velocity[] = "left_velocity";
 static char custom_interfaces__msg__Encoder__FIELD_NAME__right_ticks[] = "right_ticks";
 static char custom_interfaces__msg__Encoder__FIELD_NAME__right_velocity[] = "right_velocity";
 
@@ -48,7 +48,7 @@ static rosidl_runtime_c__type_description__Field custom_interfaces__msg__Encoder
     {NULL, 0, 0},
   },
   {
-    {custom_interfaces__msg__Encoder__FIELD_NAME__left_velocit, 12, 12},
+    {custom_interfaces__msg__Encoder__FIELD_NAME__left_velocity, 13, 13},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
       0,
@@ -101,7 +101,7 @@ custom_interfaces__msg__Encoder__get_type_description(
 static char toplevel_type_raw_source[] =
   "#Encoder Data\n"
   "int64 left_ticks\n"
-  "float64 left_velocit\n"
+  "float64 left_velocity\n"
   "int64 right_ticks\n"
   "float64 right_velocity";
 
@@ -117,7 +117,7 @@ custom_interfaces__msg__Encoder__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {custom_interfaces__msg__Encoder__TYPE_NAME, 29, 29},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 93, 93},
+    {toplevel_type_raw_source, 94, 94},
   };
   return &source;
 }

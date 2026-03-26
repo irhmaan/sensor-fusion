@@ -4,40 +4,30 @@
       "type_name": "custom_interfaces/msg/IMU",
       "fields": [
         {
-          "name": "name",
+          "name": "accel",
           "type": {
-            "type_id": 17,
-            "capacity": 0,
+            "type_id": 59,
+            "capacity": 3,
             "string_capacity": 0,
             "nested_type_name": ""
           },
           "default_value": ""
         },
         {
-          "name": "x",
+          "name": "gyro",
           "type": {
-            "type_id": 11,
-            "capacity": 0,
+            "type_id": 59,
+            "capacity": 3,
             "string_capacity": 0,
             "nested_type_name": ""
           },
           "default_value": ""
         },
         {
-          "name": "y",
+          "name": "mag",
           "type": {
-            "type_id": 11,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "z",
-          "type": {
-            "type_id": 11,
-            "capacity": 0,
+            "type_id": 59,
+            "capacity": 3,
             "string_capacity": 0,
             "nested_type_name": ""
           },
@@ -50,7 +40,7 @@
   "type_hashes": [
     {
       "type_name": "custom_interfaces/msg/IMU",
-      "hash_string": "RIHS01_72d573302b94f8119fececa5cc3a7470221ecf58d6bf545f83be099e4653bee1"
+      "hash_string": "RIHS01_fa7a7f2e266c3cbd0de281351dbb943dd3911b53748dd48b077fcb56f7e98b8f"
     }
   ]
 }

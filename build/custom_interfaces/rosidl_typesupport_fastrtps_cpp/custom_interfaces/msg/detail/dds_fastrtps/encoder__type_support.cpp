@@ -39,8 +39,8 @@ cdr_serialize(
   // Member: left_ticks
   cdr << ros_message.left_ticks;
 
-  // Member: left_velocit
-  cdr << ros_message.left_velocit;
+  // Member: left_velocity
+  cdr << ros_message.left_velocity;
 
   // Member: right_ticks
   cdr << ros_message.right_ticks;
@@ -60,8 +60,8 @@ cdr_deserialize(
   // Member: left_ticks
   cdr >> ros_message.left_ticks;
 
-  // Member: left_velocit
-  cdr >> ros_message.left_velocit;
+  // Member: left_velocity
+  cdr >> ros_message.left_velocity;
 
   // Member: right_ticks
   cdr >> ros_message.right_ticks;
@@ -93,9 +93,9 @@ get_serialized_size(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: left_velocit
+  // Member: left_velocity
   {
-    size_t item_size = sizeof(ros_message.left_velocit);
+    size_t item_size = sizeof(ros_message.left_velocity);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -144,7 +144,7 @@ max_serialized_size_Encoder(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // Member: left_velocit
+  // Member: left_velocity
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -191,8 +191,8 @@ cdr_serialize_key(
   // Member: left_ticks
   cdr << ros_message.left_ticks;
 
-  // Member: left_velocit
-  cdr << ros_message.left_velocit;
+  // Member: left_velocity
+  cdr << ros_message.left_velocity;
 
   // Member: right_ticks
   cdr << ros_message.right_ticks;
@@ -223,9 +223,9 @@ get_serialized_size_key(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Member: left_velocit
+  // Member: left_velocity
   {
-    size_t item_size = sizeof(ros_message.left_velocit);
+    size_t item_size = sizeof(ros_message.left_velocity);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -274,7 +274,7 @@ max_serialized_size_key_Encoder(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: left_velocit
+  // Member: left_velocity
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);

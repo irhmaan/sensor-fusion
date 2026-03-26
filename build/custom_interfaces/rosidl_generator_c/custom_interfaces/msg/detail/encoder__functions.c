@@ -18,7 +18,7 @@ custom_interfaces__msg__Encoder__init(custom_interfaces__msg__Encoder * msg)
     return false;
   }
   // left_ticks
-  // left_velocit
+  // left_velocity
   // right_ticks
   // right_velocity
   return true;
@@ -31,7 +31,7 @@ custom_interfaces__msg__Encoder__fini(custom_interfaces__msg__Encoder * msg)
     return;
   }
   // left_ticks
-  // left_velocit
+  // left_velocity
   // right_ticks
   // right_velocity
 }
@@ -46,8 +46,8 @@ custom_interfaces__msg__Encoder__are_equal(const custom_interfaces__msg__Encoder
   if (lhs->left_ticks != rhs->left_ticks) {
     return false;
   }
-  // left_velocit
-  if (lhs->left_velocit != rhs->left_velocit) {
+  // left_velocity
+  if (lhs->left_velocity != rhs->left_velocity) {
     return false;
   }
   // right_ticks
@@ -71,8 +71,8 @@ custom_interfaces__msg__Encoder__copy(
   }
   // left_ticks
   output->left_ticks = input->left_ticks;
-  // left_velocit
-  output->left_velocit = input->left_velocit;
+  // left_velocity
+  output->left_velocity = input->left_velocity;
   // right_ticks
   output->right_ticks = input->right_ticks;
   // right_velocity

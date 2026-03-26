@@ -56,15 +56,15 @@ private:
   ::custom_interfaces::msg::Encoder msg_;
 };
 
-class Init_Encoder_left_velocit
+class Init_Encoder_left_velocity
 {
 public:
-  explicit Init_Encoder_left_velocit(::custom_interfaces::msg::Encoder & msg)
+  explicit Init_Encoder_left_velocity(::custom_interfaces::msg::Encoder & msg)
   : msg_(msg)
   {}
-  Init_Encoder_right_ticks left_velocit(::custom_interfaces::msg::Encoder::_left_velocit_type arg)
+  Init_Encoder_right_ticks left_velocity(::custom_interfaces::msg::Encoder::_left_velocity_type arg)
   {
-    msg_.left_velocit = std::move(arg);
+    msg_.left_velocity = std::move(arg);
     return Init_Encoder_right_ticks(msg_);
   }
 
@@ -78,10 +78,10 @@ public:
   Init_Encoder_left_ticks()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Encoder_left_velocit left_ticks(::custom_interfaces::msg::Encoder::_left_ticks_type arg)
+  Init_Encoder_left_velocity left_ticks(::custom_interfaces::msg::Encoder::_left_ticks_type arg)
   {
     msg_.left_ticks = std::move(arg);
-    return Init_Encoder_left_velocit(msg_);
+    return Init_Encoder_left_velocity(msg_);
   }
 
 private:

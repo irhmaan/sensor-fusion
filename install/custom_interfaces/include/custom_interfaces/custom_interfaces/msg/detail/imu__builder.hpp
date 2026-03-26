@@ -24,15 +24,15 @@ namespace msg
 namespace builder
 {
 
-class Init_IMU_z
+class Init_IMU_mag
 {
 public:
-  explicit Init_IMU_z(::custom_interfaces::msg::IMU & msg)
+  explicit Init_IMU_mag(::custom_interfaces::msg::IMU & msg)
   : msg_(msg)
   {}
-  ::custom_interfaces::msg::IMU z(::custom_interfaces::msg::IMU::_z_type arg)
+  ::custom_interfaces::msg::IMU mag(::custom_interfaces::msg::IMU::_mag_type arg)
   {
-    msg_.z = std::move(arg);
+    msg_.mag = std::move(arg);
     return std::move(msg_);
   }
 
@@ -40,48 +40,32 @@ private:
   ::custom_interfaces::msg::IMU msg_;
 };
 
-class Init_IMU_y
+class Init_IMU_gyro
 {
 public:
-  explicit Init_IMU_y(::custom_interfaces::msg::IMU & msg)
+  explicit Init_IMU_gyro(::custom_interfaces::msg::IMU & msg)
   : msg_(msg)
   {}
-  Init_IMU_z y(::custom_interfaces::msg::IMU::_y_type arg)
+  Init_IMU_mag gyro(::custom_interfaces::msg::IMU::_gyro_type arg)
   {
-    msg_.y = std::move(arg);
-    return Init_IMU_z(msg_);
+    msg_.gyro = std::move(arg);
+    return Init_IMU_mag(msg_);
   }
 
 private:
   ::custom_interfaces::msg::IMU msg_;
 };
 
-class Init_IMU_x
+class Init_IMU_accel
 {
 public:
-  explicit Init_IMU_x(::custom_interfaces::msg::IMU & msg)
-  : msg_(msg)
-  {}
-  Init_IMU_y x(::custom_interfaces::msg::IMU::_x_type arg)
-  {
-    msg_.x = std::move(arg);
-    return Init_IMU_y(msg_);
-  }
-
-private:
-  ::custom_interfaces::msg::IMU msg_;
-};
-
-class Init_IMU_name
-{
-public:
-  Init_IMU_name()
+  Init_IMU_accel()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_IMU_x name(::custom_interfaces::msg::IMU::_name_type arg)
+  Init_IMU_gyro accel(::custom_interfaces::msg::IMU::_accel_type arg)
   {
-    msg_.name = std::move(arg);
-    return Init_IMU_x(msg_);
+    msg_.accel = std::move(arg);
+    return Init_IMU_gyro(msg_);
   }
 
 private:
@@ -99,7 +83,7 @@ template<>
 inline
 auto build<::custom_interfaces::msg::IMU>()
 {
-  return custom_interfaces::msg::builder::Init_IMU_name();
+  return custom_interfaces::msg::builder::Init_IMU_accel();
 }
 
 }  // namespace custom_interfaces

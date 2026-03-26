@@ -223,6 +223,84 @@ battery_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/battery_node.dir/build.make CMakeFiles/battery_node.dir/build
 .PHONY : battery_node/fast
 
+#=============================================================================
+# Target rules for targets named distance_sensors_node
+
+# Build rule for target.
+distance_sensors_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 distance_sensors_node
+.PHONY : distance_sensors_node
+
+# fast build rule for target.
+distance_sensors_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/distance_sensors_node.dir/build.make CMakeFiles/distance_sensors_node.dir/build
+.PHONY : distance_sensors_node/fast
+
+#=============================================================================
+# Target rules for targets named environment_node
+
+# Build rule for target.
+environment_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 environment_node
+.PHONY : environment_node
+
+# fast build rule for target.
+environment_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/environment_node.dir/build.make CMakeFiles/environment_node.dir/build
+.PHONY : environment_node/fast
+
+#=============================================================================
+# Target rules for targets named imu_node
+
+# Build rule for target.
+imu_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imu_node
+.PHONY : imu_node
+
+# fast build rule for target.
+imu_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_node.dir/build.make CMakeFiles/imu_node.dir/build
+.PHONY : imu_node/fast
+
+#=============================================================================
+# Target rules for targets named motors_node
+
+# Build rule for target.
+motors_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motors_node
+.PHONY : motors_node
+
+# fast build rule for target.
+motors_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motors_node.dir/build.make CMakeFiles/motors_node.dir/build
+.PHONY : motors_node/fast
+
+#=============================================================================
+# Target rules for targets named lidar_node
+
+# Build rule for target.
+lidar_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lidar_node
+.PHONY : lidar_node
+
+# fast build rule for target.
+lidar_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_node.dir/build.make CMakeFiles/lidar_node.dir/build
+.PHONY : lidar_node/fast
+
+#=============================================================================
+# Target rules for targets named whl_encoders_node
+
+# Build rule for target.
+whl_encoders_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whl_encoders_node
+.PHONY : whl_encoders_node
+
+# fast build rule for target.
+whl_encoders_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whl_encoders_node.dir/build.make CMakeFiles/whl_encoders_node.dir/build
+.PHONY : whl_encoders_node/fast
+
 src/battery.o: src/battery.cpp.o
 .PHONY : src/battery.o
 
@@ -246,6 +324,126 @@ src/battery.s: src/battery.cpp.s
 src/battery.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/battery_node.dir/build.make CMakeFiles/battery_node.dir/src/battery.cpp.s
 .PHONY : src/battery.cpp.s
+
+src/distance_sensors.o: src/distance_sensors.cpp.o
+.PHONY : src/distance_sensors.o
+
+# target to build an object file
+src/distance_sensors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/distance_sensors_node.dir/build.make CMakeFiles/distance_sensors_node.dir/src/distance_sensors.cpp.o
+.PHONY : src/distance_sensors.cpp.o
+
+src/distance_sensors.i: src/distance_sensors.cpp.i
+.PHONY : src/distance_sensors.i
+
+# target to preprocess a source file
+src/distance_sensors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/distance_sensors_node.dir/build.make CMakeFiles/distance_sensors_node.dir/src/distance_sensors.cpp.i
+.PHONY : src/distance_sensors.cpp.i
+
+src/distance_sensors.s: src/distance_sensors.cpp.s
+.PHONY : src/distance_sensors.s
+
+# target to generate assembly for a file
+src/distance_sensors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/distance_sensors_node.dir/build.make CMakeFiles/distance_sensors_node.dir/src/distance_sensors.cpp.s
+.PHONY : src/distance_sensors.cpp.s
+
+src/environment.o: src/environment.cpp.o
+.PHONY : src/environment.o
+
+# target to build an object file
+src/environment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/environment_node.dir/build.make CMakeFiles/environment_node.dir/src/environment.cpp.o
+.PHONY : src/environment.cpp.o
+
+src/environment.i: src/environment.cpp.i
+.PHONY : src/environment.i
+
+# target to preprocess a source file
+src/environment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/environment_node.dir/build.make CMakeFiles/environment_node.dir/src/environment.cpp.i
+.PHONY : src/environment.cpp.i
+
+src/environment.s: src/environment.cpp.s
+.PHONY : src/environment.s
+
+# target to generate assembly for a file
+src/environment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/environment_node.dir/build.make CMakeFiles/environment_node.dir/src/environment.cpp.s
+.PHONY : src/environment.cpp.s
+
+src/imu.o: src/imu.cpp.o
+.PHONY : src/imu.o
+
+# target to build an object file
+src/imu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_node.dir/build.make CMakeFiles/imu_node.dir/src/imu.cpp.o
+.PHONY : src/imu.cpp.o
+
+src/imu.i: src/imu.cpp.i
+.PHONY : src/imu.i
+
+# target to preprocess a source file
+src/imu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_node.dir/build.make CMakeFiles/imu_node.dir/src/imu.cpp.i
+.PHONY : src/imu.cpp.i
+
+src/imu.s: src/imu.cpp.s
+.PHONY : src/imu.s
+
+# target to generate assembly for a file
+src/imu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_node.dir/build.make CMakeFiles/imu_node.dir/src/imu.cpp.s
+.PHONY : src/imu.cpp.s
+
+src/lidar.o: src/lidar.cpp.o
+.PHONY : src/lidar.o
+
+# target to build an object file
+src/lidar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_node.dir/build.make CMakeFiles/lidar_node.dir/src/lidar.cpp.o
+.PHONY : src/lidar.cpp.o
+
+src/lidar.i: src/lidar.cpp.i
+.PHONY : src/lidar.i
+
+# target to preprocess a source file
+src/lidar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_node.dir/build.make CMakeFiles/lidar_node.dir/src/lidar.cpp.i
+.PHONY : src/lidar.cpp.i
+
+src/lidar.s: src/lidar.cpp.s
+.PHONY : src/lidar.s
+
+# target to generate assembly for a file
+src/lidar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_node.dir/build.make CMakeFiles/lidar_node.dir/src/lidar.cpp.s
+.PHONY : src/lidar.cpp.s
+
+src/motors.o: src/motors.cpp.o
+.PHONY : src/motors.o
+
+# target to build an object file
+src/motors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motors_node.dir/build.make CMakeFiles/motors_node.dir/src/motors.cpp.o
+.PHONY : src/motors.cpp.o
+
+src/motors.i: src/motors.cpp.i
+.PHONY : src/motors.i
+
+# target to preprocess a source file
+src/motors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motors_node.dir/build.make CMakeFiles/motors_node.dir/src/motors.cpp.i
+.PHONY : src/motors.cpp.i
+
+src/motors.s: src/motors.cpp.s
+.PHONY : src/motors.s
+
+# target to generate assembly for a file
+src/motors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motors_node.dir/build.make CMakeFiles/motors_node.dir/src/motors.cpp.s
+.PHONY : src/motors.cpp.s
 
 src/odometry.o: src/odometry.cpp.o
 .PHONY : src/odometry.o
@@ -271,6 +469,30 @@ src/odometry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_node.dir/build.make CMakeFiles/odometry_node.dir/src/odometry.cpp.s
 .PHONY : src/odometry.cpp.s
 
+src/whl_encoders.o: src/whl_encoders.cpp.o
+.PHONY : src/whl_encoders.o
+
+# target to build an object file
+src/whl_encoders.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whl_encoders_node.dir/build.make CMakeFiles/whl_encoders_node.dir/src/whl_encoders.cpp.o
+.PHONY : src/whl_encoders.cpp.o
+
+src/whl_encoders.i: src/whl_encoders.cpp.i
+.PHONY : src/whl_encoders.i
+
+# target to preprocess a source file
+src/whl_encoders.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whl_encoders_node.dir/build.make CMakeFiles/whl_encoders_node.dir/src/whl_encoders.cpp.i
+.PHONY : src/whl_encoders.cpp.i
+
+src/whl_encoders.s: src/whl_encoders.cpp.s
+.PHONY : src/whl_encoders.s
+
+# target to generate assembly for a file
+src/whl_encoders.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whl_encoders_node.dir/build.make CMakeFiles/whl_encoders_node.dir/src/whl_encoders.cpp.s
+.PHONY : src/whl_encoders.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,13 +509,37 @@ help:
 	@echo "... sensors_data_uninstall"
 	@echo "... uninstall"
 	@echo "... battery_node"
+	@echo "... distance_sensors_node"
+	@echo "... environment_node"
+	@echo "... imu_node"
+	@echo "... lidar_node"
+	@echo "... motors_node"
 	@echo "... odometry_node"
+	@echo "... whl_encoders_node"
 	@echo "... src/battery.o"
 	@echo "... src/battery.i"
 	@echo "... src/battery.s"
+	@echo "... src/distance_sensors.o"
+	@echo "... src/distance_sensors.i"
+	@echo "... src/distance_sensors.s"
+	@echo "... src/environment.o"
+	@echo "... src/environment.i"
+	@echo "... src/environment.s"
+	@echo "... src/imu.o"
+	@echo "... src/imu.i"
+	@echo "... src/imu.s"
+	@echo "... src/lidar.o"
+	@echo "... src/lidar.i"
+	@echo "... src/lidar.s"
+	@echo "... src/motors.o"
+	@echo "... src/motors.i"
+	@echo "... src/motors.s"
 	@echo "... src/odometry.o"
 	@echo "... src/odometry.i"
 	@echo "... src/odometry.s"
+	@echo "... src/whl_encoders.o"
+	@echo "... src/whl_encoders.i"
+	@echo "... src/whl_encoders.s"
 .PHONY : help
 
 

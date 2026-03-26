@@ -28,7 +28,7 @@ custom_interfaces__msg__Lidar__init(custom_interfaces__msg__Lidar * msg)
     return false;
   }
   // angles
-  if (!rosidl_runtime_c__int64__Sequence__init(&msg->angles, 0)) {
+  if (!rosidl_runtime_c__double__Sequence__init(&msg->angles, 0)) {
     custom_interfaces__msg__Lidar__fini(msg);
     return false;
   }
@@ -44,7 +44,7 @@ custom_interfaces__msg__Lidar__fini(custom_interfaces__msg__Lidar * msg)
   // distances
   rosidl_runtime_c__double__Sequence__fini(&msg->distances);
   // angles
-  rosidl_runtime_c__int64__Sequence__fini(&msg->angles);
+  rosidl_runtime_c__double__Sequence__fini(&msg->angles);
 }
 
 bool
@@ -60,7 +60,7 @@ custom_interfaces__msg__Lidar__are_equal(const custom_interfaces__msg__Lidar * l
     return false;
   }
   // angles
-  if (!rosidl_runtime_c__int64__Sequence__are_equal(
+  if (!rosidl_runtime_c__double__Sequence__are_equal(
       &(lhs->angles), &(rhs->angles)))
   {
     return false;
@@ -83,7 +83,7 @@ custom_interfaces__msg__Lidar__copy(
     return false;
   }
   // angles
-  if (!rosidl_runtime_c__int64__Sequence__copy(
+  if (!rosidl_runtime_c__double__Sequence__copy(
       &(input->angles), &(output->angles)))
   {
     return false;

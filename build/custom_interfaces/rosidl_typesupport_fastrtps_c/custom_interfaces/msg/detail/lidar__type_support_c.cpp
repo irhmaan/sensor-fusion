@@ -116,9 +116,9 @@ bool cdr_deserialize_custom_interfaces__msg__Lidar(
     }
 
     if (ros_message->angles.data) {
-      rosidl_runtime_c__int64__Sequence__fini(&ros_message->angles);
+      rosidl_runtime_c__double__Sequence__fini(&ros_message->angles);
     }
-    if (!rosidl_runtime_c__int64__Sequence__init(&ros_message->angles, size)) {
+    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->angles, size)) {
       fprintf(stderr, "failed to create array for field 'angles'");
       return false;
     }
