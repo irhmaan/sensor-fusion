@@ -1,16 +1,23 @@
-*.pyc
-*.iml
-*.swp
+# ROS 2 Build Folders
+build/**
+install/
+log/
+
+# Python Caching
+__pycache__/
+*.py[cod]
+
+# Editors
+.vscode/
+.idea/
 .project
-.pydevproject
-.DS_Store
-.idea
+.cproject
+*~
 
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
+# Compiled Object files
+*.d
+*.o
+*.obj
 
-# colcon/CMake output
-build
-install
-log
+# Others
+COLCON_IGNORE
