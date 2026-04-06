@@ -1,8 +1,0 @@
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/Battery.idl
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/DistanceSensors.idl
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/Encoder.idl
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/Environment.idl
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/IMU.idl
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/Lidar.idl
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/Motors.idl
-/home/rehmaan/sensor_fusion/build/custom_interfaces/rosidl_adapter/custom_interfaces:msg/Odometry.idl
