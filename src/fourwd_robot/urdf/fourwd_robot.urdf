@@ -98,4 +98,37 @@
     <axis xyz="0 1 0"/>
   </joint>
 
+
+  <!-- =============== SENSORS ==================== -->
+  <link name="lidar_link">
+    <visual>
+      <origin xyz = "0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.05" radius="0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.18 0 0.12" rpy ="0 0 0" />
+  </joint>
+
+
+  <link name="imu_link" >
+        <visual>
+      <origin xyz = "0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.03 0.05"/>    <!--- l*b*h -->
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.1" rpy="0 1.57 0"/>
+  </joint>
+
 </robot>
