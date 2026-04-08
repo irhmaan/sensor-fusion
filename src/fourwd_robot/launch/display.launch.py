@@ -9,11 +9,11 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
 
-    # URDF path
-    urdf_path = PathJoinSubstitution([
+    # xacro path
+    xacro_path = PathJoinSubstitution([
         FindPackageShare('fourwd_robot'),
         'urdf',
-        'fourwd_robot.urdf'
+        'fourwd_robot.xacro'
     ])
 
     #rviz path
@@ -33,17 +33,18 @@ def generate_launch_description():
 
     model_arg = DeclareLaunchArgument(
         name='model',
-        default_value=urdf_path,
+        default_value=xacro_path,
         description='Path to URDF file'
     )
 
-    # robot_description
-    robot_description = {
-        'robot_description': ParameterValue(
-            FileContent(LaunchConfiguration('model')),
-            value_type=str
-        )
-    }
+    # robot_description - to be used when using urdf - raw urdf can be passed.
+    # But in case of Xacro, need to parse the file using xacro command provided the file path.
+    # robot_description = {
+    #     'robot_description': ParameterValue(
+    #         FileContent(LaunchConfiguration('model')),
+    #         value_type=str
+    #     )
+    # }
 
     return LaunchDescription([
 
@@ -54,14 +55,19 @@ def generate_launch_description():
         Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
-            parameters=[robot_description]
+            name='robot_state_publisher',
+            output='screen',
+            parameters=[{
+                'robot_description': Command(['xacro ', xacro_path])
+                }]
         ),
         
 
         # Joint State Publisher GUI
         Node(
             package='joint_state_publisher_gui',
-            executable='joint_state_publisher_gui'
+            executable='joint_state_publisher_gui',
+            name='joint_state_publisher_gui'
         ),
         # Rviz loaded with fourwd.rviz   
         Node(
