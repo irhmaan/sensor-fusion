@@ -19,7 +19,6 @@ diff_drive_controller:
     publish_rate: 50.0
     odom_frame_id: "odom"
     base_frame_id: "base_footprint"
-
     linear.x.max_velocity: 1.0
     linear.x.mean_velocity: -1.0
     angular.z.max_velocity: 1.0
@@ -27,6 +26,6 @@ diff_drive_controller:
 
     # Publish odometry on /odom
     # publish_odom_to_tf: true
-    use_stamped_vel: true
+    use_stamped_vel: false
     enable_odom_tf: true
     open_loop: true

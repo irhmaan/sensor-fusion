@@ -127,11 +127,20 @@
     <origin xyz="0.18 0 0.1" rpy="0 0 0"/>   
   </joint>
 
+<gazebo>
+  <plugin filename="libgz_ros2_control-system.so"
+          name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+    <robot_namespace>/</robot_namespace>
+    <parameters>$(find fourwd_robot)/config/fourwd_robot_controllers.yaml</parameters>
+  </plugin>
+</gazebo>
+
   <!-- ====================== ROS2_CONTROL ====================== -->
-  <ros2_control name="GazeboSystem" type="system">
+  <ros2_control name="fourwd_robot" type="system">
      <hardware>
-        <plugin>mock_components/GenericSystem</plugin>
-        <params name="calculate_dynamics">true</params>
+        <!-- <plugin>mock_components/GenericSystem</plugin> -->
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        <!-- <params name="calculate_dynamics">true</params> -->
     </hardware>
 
     <joint name="fl_wheel_joint">

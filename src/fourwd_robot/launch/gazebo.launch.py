@@ -4,6 +4,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch.substitutions import PathJoinSubstitution, Command
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+import os
 
 def generate_launch_description():
 
@@ -12,7 +13,11 @@ def generate_launch_description():
         'urdf',
         'fourwd_robot.xacro'
     ])
-
+    controllers_file = PathJoinSubstitution([
+        FindPackageShare('fourwd_robot'),
+        'config',
+        'fourwd_robot_controllers.yaml'
+    ]) 
     robot_description = Command(['xacro ', xacro_file])
 
     return LaunchDescription([
@@ -66,29 +71,31 @@ def generate_launch_description():
         ),
 
         # 5. Spawn controllers AFTER Gazebo + ros2_control is ready
-        TimerAction(
-            period=6.0,
-            actions=[
-
-                Node(
-                    package='controller_manager',
-                    executable='spawner',
-                    arguments=[
-                        'joint_state_broadcaster',
-                        '--controller-manager', '/controller_manager'
-                    ],
-                    output='screen'
-                ),
-
-                Node(
-                    package='controller_manager',
-                    executable='spawner',
-                    arguments=[
-                        'diff_drive_controller',
-                        '--controller-manager', '/controller_manager'
-                    ],
-                    output='screen'
-                ),
-            ]
+       TimerAction(
+    period=8.0,
+    actions=[
+        Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=[
+                'joint_state_broadcaster',
+                '--controller-manager', '/controller_manager'
+            ],
+            output='screen'
         ),
+
+        Node(
+            package='controller_manager',
+            executable='spawner',
+            arguments=[
+                'diff_drive_controller',
+                '--controller-manager', '/controller_manager'
+            ],
+            remappings=[
+                ('/diff_drive_controller/odom', '/odom'),
+            ],
+            output='screen'
+        ),
+    ]
+)
     ])
