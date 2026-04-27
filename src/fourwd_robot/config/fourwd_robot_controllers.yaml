@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 50 # Hz
+    update_rate: 200 # Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -12,20 +12,40 @@ diff_drive_controller:
   ros__parameters:
     left_wheel_names: ["fl_wheel_joint", "rl_wheel_joint"]
     right_wheel_names: ["fr_wheel_joint", "rr_wheel_joint"]
-
-    wheel_separation: 0.334 # track_width
+    wheel_separation: 0.334
     wheel_radius: 0.065
 
-    publish_rate: 50.0
     odom_frame_id: "odom"
     base_frame_id: "base_footprint"
-    linear.x.max_velocity: 1.0
-    linear.x.mean_velocity: -1.0
-    angular.z.max_velocity: 1.0
-    angular.z.mean_velocity: -1.0
 
-    # Publish odometry on /odom
-    # publish_odom_to_tf: true
-    use_stamped_vel: false
+    publish_rate: 50.0
     enable_odom_tf: true
-    open_loop: true
+
+    use_stamped_vel: false
+    open_loop: true # Keep true for now (since no Gazebo feedback issues)
+
+    # === Critical for quick stopping ===
+    cmd_vel_timeout: 0.2
+
+    # === Proper velocity + acceleration limits ===
+    linear:
+      x:
+        has_velocity_limits: true
+        max_velocity: 1.0
+        min_velocity: -1.0
+        has_acceleration_limits: true
+        max_acceleration: 2.0 # more responsive
+        min_acceleration: -2.0
+
+    angular:
+      z:
+        has_velocity_limits: true
+        max_velocity: 1.0
+        min_velocity: -1.0
+        has_acceleration_limits: true
+        max_acceleration: 3.0 # Angular can be more aggressive
+        min_acceleration: -3.0
+
+    # Disable jerk limits
+    linear.x.has_jerk_limits: false
+    angular.z.has_jerk_limits: false

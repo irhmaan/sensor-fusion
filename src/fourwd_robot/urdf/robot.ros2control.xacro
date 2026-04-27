@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="fourwd_robot" params="name prefix:=''">
+      <!-- ====================== ROS2_CONTROL ====================== -->
+  <ros2_control name="${name}" type="system">
+     <hardware>
+        <!-- <plugin>mock_components/GenericSystem</plugin> -->
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        <!-- <params name="calculate_dynamics">true</params> -->
+    </hardware>
+
+    <joint name="fl_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="fr_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="rl_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="rr_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+  </xacro:macro>
+
+</robot>
